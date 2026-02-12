@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMC Group - Brand Guidelines</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+  <style>
+    .hex-code-btn {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: inherit;
+      background: rgba(8, 145, 178, 0.15);
+      border: 1px solid rgba(8, 145, 178, 0.3);
+      color: #22d3ee;
+      padding: 0.125rem 0.375rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-weight: 500;
+    }
+    .hex-code-btn:hover {
+      background: rgba(8, 145, 178, 0.25);
+      border-color: #22d3ee;
+      transform: translateY(-1px);
+    }
+    .hex-code-btn:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-black font-sans text-white">
+
+<div class="max-w-5xl mx-auto px-6 py-16">
+
+  <!-- Header -->
+  <div class="mb-20">
+    <div class="flex items-center justify-between mb-8">
+      <div class="flex items-center gap-3">
+        <img src="../assets/cmc-resized.png" alt="CMC Logo" class="h-12">
+        <div>
+          <h1 class="text-3xl font-bold">CMC Group</h1>
+          <p class="text-gray-500 text-sm">Brand Guidelines v1.0</p>
+        </div>
+      </div>
+      <a href="../index.html" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+        Back to Docs
+      </a>
+    </div>
+    <p class="text-gray-400 text-lg leading-relaxed max-w-3xl">
+      These guidelines define the visual identity of CMC Group across all digital touchpoints. They ensure consistency, professionalism, and brand recognition in every piece of communication.
+    </p>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <nav class="bg-gray-900 border border-gray-800 rounded-2xl p-8 mb-20">
+    <h2 class="text-lg font-semibold mb-4">Contents</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <a href="#brand-logo" class="text-gray-400 text-sm hover:text-white">1. Logo Usage</a>
+      <a href="#brand-colors" class="text-gray-400 text-sm hover:text-white">2. Color System</a>
+      <a href="#brand-typography" class="text-gray-400 text-sm hover:text-white">3. Typography</a>
+      <a href="#brand-spacing" class="text-gray-400 text-sm hover:text-white">4. Spacing System</a>
+      <a href="#brand-imagery" class="text-gray-400 text-sm hover:text-white">5. Imagery & Photography</a>
+      <a href="#brand-voice" class="text-gray-400 text-sm hover:text-white">6. Voice & Tone</a>
+      <a href="#brand-dos-donts" class="text-gray-400 text-sm hover:text-white">7. Do's & Don'ts</a>
+      <a href="#brand-accessibility" class="text-gray-400 text-sm hover:text-white">8. Accessibility</a>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       1. LOGO USAGE
+       ============================================ -->
+  <section id="brand-logo" class="mb-24">
+    <h2 class="text-3xl font-bold mb-2">1. Logo Usage</h2>
+    <div class="h-px bg-gray-800 mb-8"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- Primary Logo -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-12 flex items-center justify-center">
+        <div class="flex items-center gap-4">
+          <img src="../assets/cmc-resized.png" alt="CMC Logo" class="h-16">
+          <span class="text-white font-bold text-3xl tracking-wide">CMC</span>
+        </div>
+      </div>
+      <!-- On White -->
+      <div class="bg-white border border-gray-200 rounded-xl p-12 flex items-center justify-center">
+        <div class="flex items-center gap-4">
+          <img src="../assets/cmc-resized.png" alt="CMC Logo" class="h-16">
+          <span class="text-gray-900 font-bold text-3xl tracking-wide">CMC</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-4 text-gray-400">
+      <p><strong class="text-white">Logo Mark:</strong> A circular gradient emblem transitioning from red (#DC2626) to blue (#2563EB), representing energy, trust, and innovation.</p>
+      <p><strong class="text-white">Wordmark:</strong> "CMC" in Inter Bold, tracking-wide, positioned to the right of the mark.</p>
+      <p><strong class="text-white">Minimum Size:</strong> The logo mark should never be smaller than 24x24px. The full logo (mark + wordmark) should have a minimum width of 80px.</p>
+      <p><strong class="text-white">Clear Space:</strong> Maintain a minimum clear space equal to the height of the logo mark around all sides of the logo.</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       2. COLOR SYSTEM
+       ============================================ -->
+  <section id="brand-colors" class="mb-24">
+    <h2 class="text-3xl font-bold mb-2">2. Color System</h2>
+    <div class="h-px bg-gray-800 mb-8"></div>
+
+    <p class="text-gray-400 mb-8">The CMC color palette is designed around a dark-first aesthetic. Dark backgrounds create a premium, modern feel, while teal accents provide energy and visual hierarchy.</p>
+
+    <!-- Primary Brand Colors -->
+    <h3 class="text-xl font-semibold mb-4">Primary Brand Colors</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div>
+        <div class="h-24 rounded-xl" style="background: #0891B2;"></div>
+        <p class="text-white text-sm font-semibold mt-3">Teal Primary</p>
+        <p class="text-gray-500 text-xs font-mono">#0891B2</p>
+        <p class="text-gray-600 text-xs mt-1">Main accent color for CTAs, links, highlights</p>
+      </div>
+      <div>
+        <div class="h-24 rounded-xl" style="background: #22D3EE;"></div>
+        <p class="text-white text-sm font-semibold mt-3">Teal Light</p>
+        <p class="text-gray-500 text-xs font-mono">#22D3EE</p>
+        <p class="text-gray-600 text-xs mt-1">Lighter teal for text accents, gradients</p>
+      </div>
+      <div>
+        <div class="h-24 rounded-xl" style="background: #DC2626;"></div>
+        <p class="text-white text-sm font-semibold mt-3">Red (Logo)</p>
+        <p class="text-gray-500 text-xs font-mono">#DC2626</p>
+        <p class="text-gray-600 text-xs mt-1">Logo only. Not used for UI elements.</p>
+      </div>
+      <div>
+        <div class="h-24 rounded-xl" style="background: #2563EB;"></div>
+        <p class="text-white text-sm font-semibold mt-3">Blue (Logo)</p>
+        <p class="text-gray-500 text-xs font-mono">#2563EB</p>
+        <p class="text-gray-600 text-xs mt-1">Logo only. Not used for UI elements.</p>
+      </div>
+    </div>
+
+    <!-- Background Colors -->
+    <h3 class="text-xl font-semibold mb-4">Background Hierarchy</h3>
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-4 mb-12">
+      <div>
+        <div class="h-16 rounded-lg border border-gray-800" style="background: #000000;"></div>
+        <p class="text-gray-400 text-xs mt-2">Base</p>
+        <p class="text-gray-600 text-[10px] font-mono">#000000</p>
+      </div>
+      <div>
+        <div class="h-16 rounded-lg border border-gray-800" style="background: #0A0A0A;"></div>
+        <p class="text-gray-400 text-xs mt-2">Elevated</p>
+        <p class="text-gray-600 text-[10px] font-mono">#0A0A0A</p>
+      </div>
+      <div>
+        <div class="h-16 rounded-lg border border-gray-800" style="background: #111111;"></div>
+        <p class="text-gray-400 text-xs mt-2">Surface</p>
+        <p class="text-gray-600 text-[10px] font-mono">#111111</p>
+      </div>
+      <div>
+        <div class="h-16 rounded-lg border border-gray-800" style="background: #1A1A1A;"></div>
+        <p class="text-gray-400 text-xs mt-2">Surface Alt</p>
+        <p class="text-gray-600 text-[10px] font-mono">#1A1A1A</p>
+      </div>
+      <div>
+        <div class="h-16 rounded-lg border border-gray-800" style="background: #111827;"></div>
+        <p class="text-gray-400 text-xs mt-2">Card</p>
+        <p class="text-gray-600 text-[10px] font-mono">#111827</p>
+      </div>
+      <div>
+        <div class="h-16 rounded-lg border border-gray-800" style="background: #1F2937;"></div>
+        <p class="text-gray-400 text-xs mt-2">Card Hover</p>
+        <p class="text-gray-600 text-[10px] font-mono">#1F2937</p>
+      </div>
+    </div>
+
+    <!-- Color Usage Rules -->
+    <h3 class="text-xl font-semibold mb-4">Color Usage Rules</h3>
+    <div class="space-y-4 text-gray-400 text-sm">
+      <div class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        <span>Use <strong class="text-white">teal (#0891B2 / #22D3EE)</strong> as the primary accent for buttons, links, highlights, card borders, and interactive elements.</span>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        <span>Use <strong class="text-white">white (#FFFFFF)</strong> for primary text on dark backgrounds and for the main CTA button background.</span>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        <span>Use <strong class="text-white">gray scale (#D1D5DB, #9CA3AF, #6B7280)</strong> for secondary text, muted content, and labels in decreasing hierarchy.</span>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        <span>Never use the <strong class="text-white">red and blue logo colors</strong> for UI elements, buttons, or text. They are reserved exclusively for the CMC logo mark.</span>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        <span>Never use light gray or white backgrounds as the primary page background. The CMC brand is dark-first.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       3. TYPOGRAPHY
+       ============================================ -->
+  <section id="brand-typography" class="mb-24">
+    <h2 class="text-3xl font-bold mb-2">3. Typography</h2>
+    <div class="h-px bg-gray-800 mb-8"></div>
+
+    <p class="text-gray-400 mb-8">Inter is the sole typeface used across all CMC Group materials. Its geometric precision and extensive weight range make it ideal for both bold headlines and readable body text.</p>
+
+    <!-- Font Weights -->
+    <h3 class="text-xl font-semibold mb-4">Type Scale</h3>
+
+    <div class="space-y-6 mb-12">
+      <div class="pb-6 border-b border-gray-800">
+        <p class="text-xs text-cyan-400 uppercase tracking-widest font-semibold mb-2">Display / Page Title</p>
+        <p class="text-5xl md:text-7xl font-black text-white leading-none tracking-tight uppercase">HEADLINE</p>
+        <p class="text-gray-500 text-xs font-mono mt-3">72-96px | Inter Black (900) | uppercase | letter-spacing: -0.025em | line-height: 1.1</p>
+      </div>
+
+      <div class="pb-6 border-b border-gray-800">
+        <p class="text-xs text-cyan-400 uppercase tracking-widest font-semibold mb-2">Section Heading</p>
+        <p class="text-3xl md:text-4xl font-bold text-white uppercase">SECTION HEADING</p>
+        <p class="text-gray-500 text-xs font-mono mt-3">30-36px | Inter Bold (700) | uppercase | line-height: 1.25</p>
+      </div>
+
+      <div class="pb-6 border-b border-gray-800">
+        <p class="text-xs text-cyan-400 uppercase tracking-widest font-semibold mb-2">Card / Component Title</p>
+        <p class="text-lg font-bold text-white">Card Title or Subsection</p>
+        <p class="text-gray-500 text-xs font-mono mt-3">18px | Inter Bold (700) | sentence case | line-height: 1.5</p>
+      </div>
+
+      <div class="pb-6 border-b border-gray-800">
+        <p class="text-xs text-cyan-400 uppercase tracking-widest font-semibold mb-2">Body Text</p>
+        <p class="text-base text-gray-300 leading-relaxed">Body text is set in Inter Regular at 16px with a relaxed 1.625 line-height for optimal readability on dark backgrounds. Secondary text uses lighter gray values.</p>
+        <p class="text-gray-500 text-xs font-mono mt-3">16px | Inter Regular (400) | color: gray-300 | line-height: 1.625</p>
+      </div>
+
+      <div class="pb-6 border-b border-gray-800">
+        <p class="text-xs text-cyan-400 uppercase tracking-widest font-semibold mb-2">Small Text / Card Descriptions</p>
+        <p class="text-sm text-gray-400 leading-relaxed">Smaller body text used for card descriptions, supporting content, and secondary information.</p>
+        <p class="text-gray-500 text-xs font-mono mt-3">14px | Inter Regular (400) | color: gray-400 | line-height: 1.5</p>
+      </div>
+
+      <div>
+        <p class="text-xs text-cyan-400 uppercase tracking-widest font-semibold mb-2">Labels & Captions</p>
+        <p class="text-xs text-gray-500 uppercase tracking-wider">Section label / overline text</p>
+        <p class="text-gray-500 text-xs font-mono mt-3">12px | Inter Semibold (600) | uppercase | tracking: 0.1em | color: cyan-400 or gray-500</p>
+      </div>
+    </div>
+
+    <!-- Typography Rules -->
+    <h3 class="text-xl font-semibold mb-4">Typography Rules</h3>
+    <div class="space-y-3 text-gray-400 text-sm">
+      <div class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        <span>Page titles and section headings are always <strong class="text-white">UPPERCASE</strong>.</span>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        <span>Body text and card titles use <strong class="text-white">sentence case</strong>.</span>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        <span>Use tight letter-spacing (-0.025em) for display headings and normal/wide for body text.</span>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        <span>Never use decorative, serif, or script fonts. Inter is the only approved typeface.</span>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        <span>Never go below 12px (0.75rem) for any text. Minimum readable size on screens.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       4. SPACING SYSTEM
+       ============================================ -->
+  <section id="brand-spacing" class="mb-24">
+    <h2 class="text-3xl font-bold mb-2">4. Spacing System</h2>
+    <div class="h-px bg-gray-800 mb-8"></div>
+
+    <p class="text-gray-400 mb-8">All spacing is based on a <strong class="text-white">4px base unit</strong>. Use multiples of 4 for all padding, margins, and gaps to maintain visual rhythm.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <h3 class="text-white font-semibold mb-4">Component Spacing</h3>
+        <table class="w-full text-sm">
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Inside cards</td><td class="py-2 text-white font-mono text-xs">24px (p-6)</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Between cards</td><td class="py-2 text-white font-mono text-xs">24-32px (gap-6 to gap-8)</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Heading to content</td><td class="py-2 text-white font-mono text-xs">16-24px (mb-4 to mb-6)</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Paragraph gap</td><td class="py-2 text-white font-mono text-xs">16px (mb-4)</td></tr>
+          <tr><td class="py-2 text-gray-400">Icon to text</td><td class="py-2 text-white font-mono text-xs">12-16px (gap-3 to gap-4)</td></tr>
+        </table>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <h3 class="text-white font-semibold mb-4">Section Spacing</h3>
+        <table class="w-full text-sm">
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Between sections</td><td class="py-2 text-white font-mono text-xs">80-96px (py-20 to py-24)</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Section title to grid</td><td class="py-2 text-white font-mono text-xs">48px (mb-12)</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Hero top padding</td><td class="py-2 text-white font-mono text-xs">128px (pt-32)</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Container side padding</td><td class="py-2 text-white font-mono text-xs">24px (px-6)</td></tr>
+          <tr><td class="py-2 text-gray-400">Two-column gap</td><td class="py-2 text-white font-mono text-xs">48-80px (gap-12 to gap-20)</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       5. IMAGERY
+       ============================================ -->
+  <section id="brand-imagery" class="mb-24">
+    <h2 class="text-3xl font-bold mb-2">5. Imagery & Photography</h2>
+    <div class="h-px bg-gray-800 mb-8"></div>
+
+    <div class="space-y-4 text-gray-400 mb-8">
+      <p><strong class="text-white">Style:</strong> Photography should feel authentic, professional, and energetic. Favor candid team shots, action moments, and real workplace environments over staged stock photos.</p>
+      <p><strong class="text-white">Treatment:</strong> On dark backgrounds, images use a dark overlay gradient (from black/70 via black/30 to black/80) to ensure text readability. Team portrait photos use a grayscale filter that transitions to color on hover.</p>
+      <p><strong class="text-white">Aspect Ratios:</strong> Hero images are full-width at 16:9 minimum. Card images use a 3:2 ratio. Team portraits are 1:1 (square, displayed in circles).</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-gray-900 border border-gray-800 rounded-lg p-4 text-center">
+        <div class="w-full h-20 bg-gray-800 rounded mb-2 flex items-center justify-center text-gray-600 text-xs">Hero: 16:9+</div>
+        <p class="text-gray-500 text-xs">With dark overlay</p>
+      </div>
+      <div class="bg-gray-900 border border-gray-800 rounded-lg p-4 text-center">
+        <div class="w-full h-20 bg-gray-800 rounded mb-2 flex items-center justify-center text-gray-600 text-xs">Card: 3:2</div>
+        <p class="text-gray-500 text-xs">Rounded corners (12px)</p>
+      </div>
+      <div class="bg-gray-900 border border-gray-800 rounded-lg p-4 text-center">
+        <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full mb-2 flex items-center justify-center text-gray-600 text-xs">1:1</div>
+        <p class="text-gray-500 text-xs">Portraits: circle crop</p>
+      </div>
+      <div class="bg-gray-900 border border-gray-800 rounded-lg p-4 text-center">
+        <div class="w-full h-20 bg-gray-800 rounded mb-2 flex items-center justify-center text-gray-600 text-xs">Gallery: mixed</div>
+        <p class="text-gray-500 text-xs">Grid with hover zoom</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       6. VOICE & TONE
+       ============================================ -->
+  <section id="brand-voice" class="mb-24">
+    <h2 class="text-3xl font-bold mb-2">6. Voice & Tone</h2>
+    <div class="h-px bg-gray-800 mb-8"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+        <h3 class="text-white font-semibold mb-4">Brand Personality</h3>
+        <ul class="space-y-3 text-gray-400 text-sm">
+          <li class="flex items-center gap-3">
+            <span class="w-2 h-2 bg-cyan-500 rounded-full flex-shrink-0"></span>
+            <span><strong class="text-white">Confident:</strong> Bold statements, strong headlines, direct messaging.</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-2 h-2 bg-cyan-500 rounded-full flex-shrink-0"></span>
+            <span><strong class="text-white">Professional:</strong> Clean, organized, data-driven language.</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-2 h-2 bg-cyan-500 rounded-full flex-shrink-0"></span>
+            <span><strong class="text-white">Growth-oriented:</strong> Focus on scaling, results, and leadership.</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-2 h-2 bg-cyan-500 rounded-full flex-shrink-0"></span>
+            <span><strong class="text-white">People-first:</strong> Emphasis on team, culture, and development.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+        <h3 class="text-white font-semibold mb-4">Writing Guidelines</h3>
+        <ul class="space-y-3 text-gray-400 text-sm">
+          <li class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>Use active voice: "We help businesses scale" not "Businesses are helped by us"</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>Keep headlines short and impactful (5-8 words max)</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>Use concrete numbers and metrics when possible</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-red-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span>Avoid jargon, buzzwords, and overly casual language</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       7. DO'S & DON'TS
+       ============================================ -->
+  <section id="brand-dos-donts" class="mb-24">
+    <h2 class="text-3xl font-bold mb-2">7. Do's & Don'ts</h2>
+    <div class="h-px bg-gray-800 mb-8"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- DO'S -->
+      <div>
+        <h3 class="text-green-400 font-semibold mb-6 flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          DO
+        </h3>
+        <div class="space-y-4">
+          <div class="bg-gray-900 border border-green-800/30 rounded-xl p-5">
+            <p class="text-white text-sm font-medium mb-1">Use the full color palette consistently</p>
+            <p class="text-gray-500 text-xs">Stick to the defined color tokens. Use teal for accents, grays for text hierarchy.</p>
+          </div>
+          <div class="bg-gray-900 border border-green-800/30 rounded-xl p-5">
+            <p class="text-white text-sm font-medium mb-1">Maintain generous whitespace</p>
+            <p class="text-gray-500 text-xs">Use 80-96px between major sections. Let content breathe.</p>
+          </div>
+          <div class="bg-gray-900 border border-green-800/30 rounded-xl p-5">
+            <p class="text-white text-sm font-medium mb-1">Use uppercase for headings</p>
+            <p class="text-gray-500 text-xs">Page titles and section headings should always be uppercase with tight tracking.</p>
+          </div>
+          <div class="bg-gray-900 border border-green-800/30 rounded-xl p-5">
+            <p class="text-white text-sm font-medium mb-1">Use pill-shaped buttons for primary CTAs</p>
+            <p class="text-gray-500 text-xs">The rounded-full button style is the signature CTA pattern.</p>
+          </div>
+          <div class="bg-gray-900 border border-green-800/30 rounded-xl p-5">
+            <p class="text-white text-sm font-medium mb-1">Include hover/transition effects</p>
+            <p class="text-gray-500 text-xs">All interactive elements should have smooth 300ms transitions.</p>
+          </div>
+          <div class="bg-gray-900 border border-green-800/30 rounded-xl p-5">
+            <p class="text-white text-sm font-medium mb-1">Use image overlays for text readability</p>
+            <p class="text-gray-500 text-xs">Always apply dark gradient overlays on images with text.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DON'TS -->
+      <div>
+        <h3 class="text-red-400 font-semibold mb-6 flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          DON'T
+        </h3>
+        <div class="space-y-4">
+          <div class="bg-gray-900 border border-red-800/30 rounded-xl p-5">
+            <p class="text-white text-sm font-medium mb-1">Use light/white page backgrounds</p>
+            <p class="text-gray-500 text-xs">The CMC brand is dark-first. White is only used for specific sections (services cards).</p>
+          </div>
+          <div class="bg-gray-900 border border-red-800/30 rounded-xl p-5">
+            <p class="text-white text-sm font-medium mb-1">Use red/blue from the logo as UI colors</p>
+            <p class="text-gray-500 text-xs">Logo colors are reserved for the mark only. Use teal for all UI accents.</p>
+          </div>
+          <div class="bg-gray-900 border border-red-800/30 rounded-xl p-5">
+            <p class="text-white text-sm font-medium mb-1">Use sharp corners on cards and buttons</p>
+            <p class="text-gray-500 text-xs">Always use rounded corners: 12px for cards, full radius for buttons.</p>
+          </div>
+          <div class="bg-gray-900 border border-red-800/30 rounded-xl p-5">
+            <p class="text-white text-sm font-medium mb-1">Mix multiple font families</p>
+            <p class="text-gray-500 text-xs">Inter is the only approved typeface. No serif, script, or decorative fonts.</p>
+          </div>
+          <div class="bg-gray-900 border border-red-800/30 rounded-xl p-5">
+            <p class="text-white text-sm font-medium mb-1">Place text on images without overlays</p>
+            <p class="text-gray-500 text-xs">Always use gradient overlays to ensure text contrast and readability.</p>
+          </div>
+          <div class="bg-gray-900 border border-red-800/30 rounded-xl p-5">
+            <p class="text-white text-sm font-medium mb-1">Use thin borders or decorations</p>
+            <p class="text-gray-500 text-xs">Keep borders subtle (gray-800). Avoid colorful or thick border treatments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       8. ACCESSIBILITY
+       ============================================ -->
+  <section id="brand-accessibility" class="mb-24">
+    <h2 class="text-3xl font-bold mb-2">8. Accessibility Guidelines</h2>
+    <div class="h-px bg-gray-800 mb-8"></div>
+
+    <p class="text-gray-400 mb-8">All CMC digital properties should meet WCAG 2.1 AA standards at minimum. Here are the key considerations for our dark-themed design.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- Color Contrast -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+        <h3 class="text-white font-semibold mb-4">Color Contrast</h3>
+        <div class="space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-gray-800">
+            <span class="text-white text-sm">White on Black</span>
+            <span class="text-green-400 text-xs font-mono">21:1 (AAA)</span>
+          </div>
+          <div class="flex items-center justify-between pb-3 border-b border-gray-800">
+            <span class="text-gray-300 text-sm">Gray-300 on Black</span>
+            <span class="text-green-400 text-xs font-mono">12.6:1 (AAA)</span>
+          </div>
+          <div class="flex items-center justify-between pb-3 border-b border-gray-800">
+            <span class="text-gray-400 text-sm">Gray-400 on Black</span>
+            <span class="text-green-400 text-xs font-mono">7.7:1 (AAA)</span>
+          </div>
+          <div class="flex items-center justify-between pb-3 border-b border-gray-800">
+            <span class="text-cyan-400 text-sm">Cyan-400 on Black</span>
+            <span class="text-green-400 text-xs font-mono">8.6:1 (AAA)</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-gray-500 text-sm">Gray-500 on Black</span>
+            <span class="text-yellow-400 text-xs font-mono">4.6:1 (AA)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guidelines -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+        <h3 class="text-white font-semibold mb-4">Requirements</h3>
+        <div class="space-y-4 text-gray-400 text-sm">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>All text must meet minimum <strong class="text-white">4.5:1</strong> contrast ratio (AA) against its background.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>Large text (18px+ bold, 24px+ regular) can meet <strong class="text-white">3:1</strong> (AA for large text).</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>All interactive elements must have visible <strong class="text-white">focus indicators</strong>.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>Images must include descriptive <strong class="text-white">alt text</strong>.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>Navigation must be fully <strong class="text-white">keyboard accessible</strong>.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>Form inputs must have associated <strong class="text-white">labels</strong> and <strong class="text-white">error messages</strong>.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Focus states note -->
+    <div class="bg-cyan-600/5 border border-cyan-600/20 rounded-xl p-6">
+      <h4 class="text-white font-semibold mb-2">Note on Gray-500 (#6B7280)</h4>
+      <p class="text-gray-400 text-sm">The gray-500 color meets AA contrast against pure black (4.6:1) but only for text 14px and above. For smaller text or critical information, use gray-400 (#9CA3AF) or lighter. Reserve gray-500 for non-essential decorative text like disclaimers and fine print.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="border-t border-gray-800 pt-8 text-center">
+    <p class="text-gray-600 text-xs">CMC Group Brand Guidelines v1.0 | Generated from design mockups</p>
+  </div>
+
+</div>
+
+<script>
+// Hex code copy functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const hexPattern = /#[0-9A-Fa-f]{6}\b/g;
+
+  const walkTextNodes = (node) => {
+    if (node.nodeType === 3) { // Text node
+      const text = node.textContent;
+      const matches = text.match(hexPattern);
+      if (matches) {
+        const span = document.createElement('span');
+        let lastIndex = 0;
+        let html = '';
+
+        text.replace(hexPattern, (match, offset) => {
+          html += text.substring(lastIndex, offset);
+          html += `<button class="hex-code-btn" data-hex="${match}" title="Click to copy ${match}">${match}</button>`;
+          lastIndex = offset + match.length;
+        });
+        html += text.substring(lastIndex);
+
+        span.innerHTML = html;
+        node.parentNode.replaceChild(span, node);
+      }
+    } else if (node.nodeType === 1 && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
+      Array.from(node.childNodes).forEach(walkTextNodes);
+    }
+  };
+
+  walkTextNodes(document.body);
+
+  // Add click handlers
+  document.querySelectorAll('.hex-code-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const hex = btn.getAttribute('data-hex');
+
+      navigator.clipboard.writeText(hex).then(() => {
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.style.background = '#22d3ee';
+        btn.style.color = '#000';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.style.color = '';
+        }, 1500);
+      }).catch(() => {
+        const textarea = document.createElement('textarea');
+        textarea.value = hex;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = hex; }, 1500);
+      });
+    });
+  });
+});
+</script>
+
+</body>
+</html>

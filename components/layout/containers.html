@@ -1,0 +1,149 @@
+<!--
+  CMC Design System - Container & Layout Patterns
+
+  Description: Container widths, grid layouts, and page structure patterns.
+  Used on: All pages
+  Variants: Full width, Constrained, Two-column, Three-column
+
+  Dependencies: Tailwind CSS CDN
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Containers & Layout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="bg-black font-sans p-12">
+
+<div class="space-y-20">
+
+  <!-- ============================================
+       MAX-WIDTH CONTAINER
+       Primary content container: max-w-7xl (1280px)
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-4">Content Container (max-w-7xl / 1280px)</h3>
+    <div class="max-w-7xl mx-auto px-6 bg-gray-900/50 border border-dashed border-gray-700 rounded-xl py-8">
+      <p class="text-gray-400 text-sm text-center">max-w-7xl mx-auto px-6</p>
+    </div>
+  </div>
+
+  <!-- ============================================
+       NARROW CONTAINER
+       For text-heavy sections: max-w-3xl or max-w-4xl
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-4">Narrow Container (max-w-3xl / 768px)</h3>
+    <div class="max-w-3xl mx-auto px-6 bg-gray-900/50 border border-dashed border-gray-700 rounded-xl py-8">
+      <p class="text-gray-400 text-sm text-center">max-w-3xl mx-auto px-6 (for centered text blocks)</p>
+    </div>
+  </div>
+
+  <!-- ============================================
+       TWO-COLUMN LAYOUT (50/50)
+       Used for text + image sections
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-4">Two-Column (50/50)</h3>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="bg-gray-900/50 border border-dashed border-gray-700 rounded-xl p-8">
+          <p class="text-gray-400 text-sm text-center">Content Column</p>
+        </div>
+        <div class="bg-gray-900/50 border border-dashed border-cyan-700/50 rounded-xl p-8">
+          <p class="text-gray-400 text-sm text-center">Image Column</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       THREE-COLUMN GRID
+       Used for service cards, blog cards, team cards
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-4">Three-Column Grid</h3>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-900/50 border border-dashed border-gray-700 rounded-xl p-8">
+          <p class="text-gray-400 text-sm text-center">Column 1</p>
+        </div>
+        <div class="bg-gray-900/50 border border-dashed border-gray-700 rounded-xl p-8">
+          <p class="text-gray-400 text-sm text-center">Column 2</p>
+        </div>
+        <div class="bg-gray-900/50 border border-dashed border-gray-700 rounded-xl p-8">
+          <p class="text-gray-400 text-sm text-center">Column 3</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       FOUR-COLUMN GRID
+       Used for stats and team member portraits
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-4">Four-Column Grid</h3>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-gray-900/50 border border-dashed border-gray-700 rounded-xl p-6">
+          <p class="text-gray-400 text-sm text-center">Col 1</p>
+        </div>
+        <div class="bg-gray-900/50 border border-dashed border-gray-700 rounded-xl p-6">
+          <p class="text-gray-400 text-sm text-center">Col 2</p>
+        </div>
+        <div class="bg-gray-900/50 border border-dashed border-gray-700 rounded-xl p-6">
+          <p class="text-gray-400 text-sm text-center">Col 3</p>
+        </div>
+        <div class="bg-gray-900/50 border border-dashed border-gray-700 rounded-xl p-6">
+          <p class="text-gray-400 text-sm text-center">Col 4</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       CONTACT PAGE LAYOUT (Form + Sidebar)
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-4">Form + Sidebar Layout</h3>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-16">
+        <div class="bg-gray-900/50 border border-dashed border-gray-700 rounded-xl p-8">
+          <p class="text-gray-400 text-sm text-center">Form Area (flexible width)</p>
+        </div>
+        <div class="bg-gray-900/50 border border-dashed border-cyan-700/50 rounded-xl p-8 lg:min-w-[280px]">
+          <p class="text-gray-400 text-sm text-center">Sidebar (auto width)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       FULL-WIDTH SECTION (Edge-to-edge)
+       Used for hero, teal banners, image sections
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-4 px-6">Full-Width Section</h3>
+    <div class="bg-cyan-700/20 border border-dashed border-cyan-700/50 py-12">
+      <p class="text-gray-400 text-sm text-center">Full-width container (no max-width, no side padding on outer)</p>
+      <div class="max-w-7xl mx-auto px-6 mt-4">
+        <div class="bg-gray-900/30 border border-dashed border-gray-600 rounded-lg p-4">
+          <p class="text-gray-500 text-xs text-center">Inner content still uses max-w-7xl mx-auto px-6</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

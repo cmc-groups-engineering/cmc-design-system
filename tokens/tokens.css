@@ -1,0 +1,183 @@
+/**
+ * CMC Group Design System - Design Tokens (CSS Custom Properties)
+ * Generated from design mockups
+ *
+ * Usage: Include this file in your project to access all design tokens
+ * as CSS custom properties. Reference them with var(--cmc-*).
+ */
+
+:root {
+  /* ============================================
+     BRAND COLORS
+     ============================================ */
+  --cmc-color-brand-primary: #0891B2;
+  --cmc-color-brand-primary-light: #22D3EE;
+  --cmc-color-brand-primary-dark: #0E7490;
+  --cmc-color-brand-secondary: #DC2626;
+  --cmc-color-brand-secondary-light: #EF4444;
+  --cmc-color-brand-tertiary: #2563EB;
+
+  /* ============================================
+     BACKGROUND COLORS
+     ============================================ */
+  --cmc-color-bg-base: #000000;
+  --cmc-color-bg-elevated: #0A0A0A;
+  --cmc-color-bg-surface: #111111;
+  --cmc-color-bg-surface-alt: #1A1A1A;
+  --cmc-color-bg-card: #111827;
+  --cmc-color-bg-card-hover: #1F2937;
+  --cmc-color-bg-input: #1F2937;
+  --cmc-color-bg-white: #FFFFFF;
+  --cmc-color-bg-light: #F9FAFB;
+  --cmc-color-bg-teal-banner: #0E7490;
+
+  /* ============================================
+     TEXT COLORS
+     ============================================ */
+  --cmc-color-text-primary: #FFFFFF;
+  --cmc-color-text-secondary: #D1D5DB;
+  --cmc-color-text-muted: #9CA3AF;
+  --cmc-color-text-subtle: #6B7280;
+  --cmc-color-text-dark: #111827;
+  --cmc-color-text-dark-secondary: #374151;
+  --cmc-color-text-accent: #22D3EE;
+  --cmc-color-text-link: #0891B2;
+
+  /* ============================================
+     BORDER COLORS
+     ============================================ */
+  --cmc-color-border-default: #1F2937;
+  --cmc-color-border-subtle: #374151;
+  --cmc-color-border-accent: #0891B2;
+  --cmc-color-border-light: #E5E7EB;
+  --cmc-color-border-input: #374151;
+
+  /* ============================================
+     GRADIENTS
+     ============================================ */
+  --cmc-gradient-hero-overlay: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 100%);
+  --cmc-gradient-teal-glow: linear-gradient(135deg, #0891B2 0%, #22D3EE 100%);
+  --cmc-gradient-card-border: linear-gradient(180deg, #0891B2 0%, transparent 100%);
+  --cmc-gradient-dark-fade: linear-gradient(180deg, #000000 0%, #111111 100%);
+
+  /* ============================================
+     TYPOGRAPHY - FONT FAMILIES
+     ============================================ */
+  --cmc-font-family-heading: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --cmc-font-family-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --cmc-font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* ============================================
+     TYPOGRAPHY - FONT SIZES
+     ============================================ */
+  --cmc-font-size-xs: 0.75rem;    /* 12px */
+  --cmc-font-size-sm: 0.875rem;   /* 14px */
+  --cmc-font-size-base: 1rem;     /* 16px */
+  --cmc-font-size-lg: 1.125rem;   /* 18px */
+  --cmc-font-size-xl: 1.25rem;    /* 20px */
+  --cmc-font-size-2xl: 1.5rem;    /* 24px */
+  --cmc-font-size-3xl: 1.875rem;  /* 30px */
+  --cmc-font-size-4xl: 2.25rem;   /* 36px */
+  --cmc-font-size-5xl: 3rem;      /* 48px */
+  --cmc-font-size-6xl: 3.75rem;   /* 60px */
+  --cmc-font-size-7xl: 4.5rem;    /* 72px */
+  --cmc-font-size-8xl: 6rem;      /* 96px */
+
+  /* ============================================
+     TYPOGRAPHY - FONT WEIGHTS
+     ============================================ */
+  --cmc-font-weight-light: 300;
+  --cmc-font-weight-regular: 400;
+  --cmc-font-weight-medium: 500;
+  --cmc-font-weight-semibold: 600;
+  --cmc-font-weight-bold: 700;
+  --cmc-font-weight-extrabold: 800;
+  --cmc-font-weight-black: 900;
+
+  /* ============================================
+     TYPOGRAPHY - LINE HEIGHTS
+     ============================================ */
+  --cmc-line-height-tight: 1.1;
+  --cmc-line-height-snug: 1.25;
+  --cmc-line-height-normal: 1.5;
+  --cmc-line-height-relaxed: 1.625;
+  --cmc-line-height-loose: 2;
+
+  /* ============================================
+     TYPOGRAPHY - LETTER SPACING
+     ============================================ */
+  --cmc-letter-spacing-tighter: -0.05em;
+  --cmc-letter-spacing-tight: -0.025em;
+  --cmc-letter-spacing-normal: 0em;
+  --cmc-letter-spacing-wide: 0.025em;
+  --cmc-letter-spacing-wider: 0.05em;
+  --cmc-letter-spacing-widest: 0.1em;
+
+  /* ============================================
+     SPACING
+     ============================================ */
+  --cmc-space-0: 0px;
+  --cmc-space-1: 4px;
+  --cmc-space-2: 8px;
+  --cmc-space-3: 12px;
+  --cmc-space-4: 16px;
+  --cmc-space-5: 20px;
+  --cmc-space-6: 24px;
+  --cmc-space-8: 32px;
+  --cmc-space-10: 40px;
+  --cmc-space-12: 48px;
+  --cmc-space-16: 64px;
+  --cmc-space-20: 80px;
+  --cmc-space-24: 96px;
+  --cmc-space-32: 128px;
+
+  /* ============================================
+     BORDER RADIUS
+     ============================================ */
+  --cmc-radius-none: 0px;
+  --cmc-radius-sm: 4px;
+  --cmc-radius-md: 8px;
+  --cmc-radius-lg: 12px;
+  --cmc-radius-xl: 16px;
+  --cmc-radius-2xl: 24px;
+  --cmc-radius-full: 9999px;
+
+  /* ============================================
+     SHADOWS
+     ============================================ */
+  --cmc-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --cmc-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --cmc-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --cmc-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --cmc-shadow-glow-teal: 0 0 20px rgba(8, 145, 178, 0.3);
+  --cmc-shadow-glow-teal-lg: 0 0 40px rgba(8, 145, 178, 0.2);
+  --cmc-shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --cmc-shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
+
+  /* ============================================
+     ANIMATION
+     ============================================ */
+  --cmc-duration-fast: 150ms;
+  --cmc-duration-normal: 300ms;
+  --cmc-duration-slow: 500ms;
+  --cmc-duration-slower: 700ms;
+  --cmc-easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --cmc-easing-in: cubic-bezier(0.4, 0, 1, 1);
+  --cmc-easing-out: cubic-bezier(0, 0, 0.2, 1);
+  --cmc-easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ============================================
+     BREAKPOINTS (for reference; use @media)
+     ============================================ */
+  --cmc-breakpoint-sm: 640px;
+  --cmc-breakpoint-md: 768px;
+  --cmc-breakpoint-lg: 1024px;
+  --cmc-breakpoint-xl: 1280px;
+  --cmc-breakpoint-2xl: 1536px;
+
+  /* ============================================
+     CONTAINER
+     ============================================ */
+  --cmc-container-max-width: 1280px;
+  --cmc-container-padding: 24px;
+}

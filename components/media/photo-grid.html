@@ -1,0 +1,122 @@
+<!--
+  CMC Design System - Photo Grid / Gallery Components
+
+  Description: Image grid layouts for team photos and action shots.
+  Used on: OurTeam (Our People in Action), HomePage
+  Variants: 2x2 grid, 3-column, Masonry, Full-width with caption
+
+  Dependencies: Tailwind CSS CDN
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Grid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="bg-black font-sans">
+
+<div class="max-w-7xl mx-auto py-20 px-6 space-y-24">
+
+  <!-- ============================================
+       VARIANT 1: Team Action Grid (OurTeam page)
+       "OUR PEOPLE IN ACTION" - Multi-size grid
+       ============================================ -->
+  <section>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 uppercase">OUR PEOPLE IN ACTION</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <!-- Large Image (spans 2 rows) -->
+      <div class="row-span-2 rounded-xl overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800"
+          alt="Team at work"
+          class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+        />
+      </div>
+      <!-- Regular Image -->
+      <div class="rounded-xl overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600"
+          alt="Team meeting"
+          class="w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-500"
+        />
+      </div>
+      <!-- Regular Image -->
+      <div class="rounded-xl overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600"
+          alt="Team event"
+          class="w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-500"
+        />
+      </div>
+      <!-- Regular Image -->
+      <div class="rounded-xl overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600"
+          alt="Team leader"
+          class="w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-500"
+        />
+      </div>
+      <!-- Regular Image -->
+      <div class="rounded-xl overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600"
+          alt="Team collaboration"
+          class="w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-500"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VARIANT 2: Two-column Image + Text (About/WhatWeDo)
+       ============================================ -->
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="rounded-xl overflow-hidden relative group">
+      <img
+        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800"
+        alt="Team"
+        class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+        <p class="text-white font-semibold">Building together, growing together.</p>
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden relative group">
+      <img
+        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800"
+        alt="Leadership"
+        class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+        <p class="text-white font-semibold">Leadership in action.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VARIANT 3: Full-width Image Banner
+       ============================================ -->
+  <section class="rounded-2xl overflow-hidden relative">
+    <img
+      src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920"
+      alt="Full team"
+      class="w-full h-64 md:h-96 object-cover"
+    />
+    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+      <h2 class="text-3xl md:text-5xl font-bold text-white text-center">Our People Make the Difference</h2>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

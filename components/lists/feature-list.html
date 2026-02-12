@@ -1,0 +1,132 @@
+<!--
+  CMC Design System - Feature / Checklist Components
+
+  Description: Styled lists for features, benefits, and value propositions.
+  Used on: WhatWeDo, AboutUs, OurTeam
+  Variants: Check list, Arrow list, Numbered list, Icon list
+
+  Dependencies: Tailwind CSS CDN
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feature Lists</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="bg-black font-sans p-12">
+
+<div class="max-w-3xl mx-auto space-y-16">
+
+  <!-- ============================================
+       CHECK LIST (Teal checkmarks)
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-6">Check List</h3>
+    <ul class="space-y-4">
+      <li class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+        <span class="text-gray-300 text-sm">Deliver measurable results for every client partnership</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+        <span class="text-gray-300 text-sm">Develop future business leaders through hands-on experience</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+        <span class="text-gray-300 text-sm">Foster a culture of integrity, collaboration, and excellence</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ============================================
+       ARROW LIST
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-6">Arrow List</h3>
+    <ul class="space-y-3">
+      <li class="flex items-center gap-3">
+        <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        <span class="text-gray-300 text-sm">Strategic sales deployment across multiple channels</span>
+      </li>
+      <li class="flex items-center gap-3">
+        <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        <span class="text-gray-300 text-sm">Real-time performance monitoring and optimization</span>
+      </li>
+      <li class="flex items-center gap-3">
+        <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        <span class="text-gray-300 text-sm">Dedicated account management and support</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ============================================
+       NUMBERED LIST
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-6">Numbered List</h3>
+    <ol class="space-y-4">
+      <li class="flex items-start gap-4">
+        <span class="flex-shrink-0 w-7 h-7 bg-cyan-600 rounded-full flex items-center justify-center text-white text-xs font-bold">1</span>
+        <div>
+          <p class="text-white font-medium text-sm mb-1">Initial Consultation</p>
+          <p class="text-gray-400 text-sm">We learn about your business, goals, and challenges.</p>
+        </div>
+      </li>
+      <li class="flex items-start gap-4">
+        <span class="flex-shrink-0 w-7 h-7 bg-cyan-600 rounded-full flex items-center justify-center text-white text-xs font-bold">2</span>
+        <div>
+          <p class="text-white font-medium text-sm mb-1">Strategy Development</p>
+          <p class="text-gray-400 text-sm">Our team crafts a customized acquisition plan.</p>
+        </div>
+      </li>
+      <li class="flex items-start gap-4">
+        <span class="flex-shrink-0 w-7 h-7 bg-cyan-600 rounded-full flex items-center justify-center text-white text-xs font-bold">3</span>
+        <div>
+          <p class="text-white font-medium text-sm mb-1">Launch & Execute</p>
+          <p class="text-gray-400 text-sm">We deploy teams and begin driving results immediately.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ============================================
+       FOOTER LINK LIST
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-6">Footer Link List</h3>
+    <div>
+      <p class="text-gray-500 text-xs uppercase tracking-wider mb-4">Menu</p>
+      <ul class="space-y-3">
+        <li><a href="#" class="text-gray-300 text-sm hover:text-white transition-colors">Home</a></li>
+        <li><a href="#" class="text-gray-300 text-sm hover:text-white transition-colors">What We Do</a></li>
+        <li><a href="#" class="text-gray-300 text-sm hover:text-white transition-colors">About Us</a></li>
+        <li><a href="#" class="text-gray-300 text-sm hover:text-white transition-colors">Our Team</a></li>
+        <li><a href="#" class="text-gray-300 text-sm hover:text-white transition-colors">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

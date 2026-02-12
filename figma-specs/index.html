@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMC Design System - Figma Specifications</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
+    }
+  </script>
+  <style>
+    .spec-label {
+      position: absolute;
+      background: #0891B2;
+      color: white;
+      font-size: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 2px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+      z-index: 10;
+    }
+    .spec-line {
+      position: absolute;
+      background: #0891B2;
+      z-index: 5;
+    }
+    .spec-line-h { height: 1px; }
+    .spec-line-v { width: 1px; }
+    .measurement-box {
+      border: 1px dashed rgba(8, 145, 178, 0.5);
+      position: relative;
+    }
+    .hex-code-btn {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: inherit;
+      background: rgba(8, 145, 178, 0.15);
+      border: 1px solid rgba(8, 145, 178, 0.3);
+      color: #22d3ee;
+      padding: 0.125rem 0.375rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-weight: 500;
+    }
+    .hex-code-btn:hover {
+      background: rgba(8, 145, 178, 0.25);
+      border-color: #22d3ee;
+      transform: translateY(-1px);
+    }
+    .hex-code-btn:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-950 font-sans text-white">
+
+<div class="max-w-6xl mx-auto px-6 py-12">
+
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-12">
+    <div class="flex items-center gap-3">
+      <img src="../assets/cmc-resized.png" alt="CMC Logo" class="h-12">
+      <div>
+        <h1 class="text-4xl font-bold mb-2">Figma Specifications</h1>
+        <p class="text-gray-400">Detailed measurements, spacing, and token mappings for recreating the CMC design system in Figma.</p>
+      </div>
+    </div>
+    <a href="../index.html" class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+      Back to Docs
+    </a>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 mb-16">
+    <h2 class="text-lg font-semibold mb-4">Contents</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <a href="#spec-global" class="text-gray-400 text-sm hover:text-white transition-colors">1. Global Styles</a>
+      <a href="#spec-navbar" class="text-gray-400 text-sm hover:text-white transition-colors">2. Navbar</a>
+      <a href="#spec-hero" class="text-gray-400 text-sm hover:text-white transition-colors">3. Hero Sections</a>
+      <a href="#spec-buttons" class="text-gray-400 text-sm hover:text-white transition-colors">4. Buttons</a>
+      <a href="#spec-cards" class="text-gray-400 text-sm hover:text-white transition-colors">5. Cards</a>
+      <a href="#spec-forms" class="text-gray-400 text-sm hover:text-white transition-colors">6. Form Elements</a>
+      <a href="#spec-footer" class="text-gray-400 text-sm hover:text-white transition-colors">7. Footer</a>
+      <a href="#spec-tokens" class="text-gray-400 text-sm hover:text-white transition-colors">8. Token Mapping</a>
+    </div>
+  </div>
+
+  <!-- ============================================
+       1. GLOBAL STYLES
+       ============================================ -->
+  <section id="spec-global" class="mb-20">
+    <h2 class="text-2xl font-bold mb-6">1. Global Styles</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Grid / Container -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <h3 class="text-white font-semibold mb-4">Container</h3>
+        <table class="w-full text-sm">
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Max Width</td><td class="py-2 text-white font-mono text-xs">1280px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Side Padding</td><td class="py-2 text-white font-mono text-xs">24px (mobile: 16px)</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Column Gap</td><td class="py-2 text-white font-mono text-xs">32px (md), 48px (lg)</td></tr>
+          <tr><td class="py-2 text-gray-400">Alignment</td><td class="py-2 text-white font-mono text-xs">Center (auto margins)</td></tr>
+        </table>
+      </div>
+
+      <!-- Typography -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <h3 class="text-white font-semibold mb-4">Typography Setup</h3>
+        <table class="w-full text-sm">
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Font Family</td><td class="py-2 text-white font-mono text-xs">Inter</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Display</td><td class="py-2 text-white font-mono text-xs">72-96px / Black (900)</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">H1 (Hero)</td><td class="py-2 text-white font-mono text-xs">48-72px / Extrabold (800)</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">H2 (Section)</td><td class="py-2 text-white font-mono text-xs">30-36px / Bold (700)</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Body</td><td class="py-2 text-white font-mono text-xs">16px / Regular (400)</td></tr>
+          <tr><td class="py-2 text-gray-400">Caption</td><td class="py-2 text-white font-mono text-xs">12px / Regular (400)</td></tr>
+        </table>
+      </div>
+
+      <!-- Spacing Scale -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <h3 class="text-white font-semibold mb-4">Spacing Scale (Figma Auto Layout)</h3>
+        <table class="w-full text-sm">
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">xs</td><td class="py-2 text-white font-mono text-xs">4px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">sm</td><td class="py-2 text-white font-mono text-xs">8px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">md</td><td class="py-2 text-white font-mono text-xs">16px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">lg</td><td class="py-2 text-white font-mono text-xs">24px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">xl</td><td class="py-2 text-white font-mono text-xs">32px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">2xl</td><td class="py-2 text-white font-mono text-xs">48px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">3xl</td><td class="py-2 text-white font-mono text-xs">64px</td></tr>
+          <tr><td class="py-2 text-gray-400">Section</td><td class="py-2 text-white font-mono text-xs">80-96px (vertical)</td></tr>
+        </table>
+      </div>
+
+      <!-- Border Radius -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <h3 class="text-white font-semibold mb-4">Border Radius</h3>
+        <table class="w-full text-sm">
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Buttons (Pill)</td><td class="py-2 text-white font-mono text-xs">9999px (full)</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Cards</td><td class="py-2 text-white font-mono text-xs">12px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Inputs</td><td class="py-2 text-white font-mono text-xs">8px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Avatars</td><td class="py-2 text-white font-mono text-xs">9999px (circle)</td></tr>
+          <tr><td class="py-2 text-gray-400">Hero Images</td><td class="py-2 text-white font-mono text-xs">16px</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       2. NAVBAR SPEC
+       ============================================ -->
+  <section id="spec-navbar" class="mb-20">
+    <h2 class="text-2xl font-bold mb-6">2. Navbar</h2>
+
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+      <!-- Annotated Navbar -->
+      <div class="relative">
+        <div class="measurement-box rounded-xl px-6 py-4 flex items-center justify-between">
+          <!-- Measurements -->
+          <span class="spec-label" style="top: -20px; left: 0;">height: 64px</span>
+          <span class="spec-label" style="top: 50%; left: -4px; transform: translateY(-50%) rotate(-90deg); transform-origin: left center;">py-4 (16px)</span>
+          <span class="spec-label" style="bottom: -20px; left: 24px;">px-6 (24px)</span>
+
+          <div class="flex items-center gap-2">
+            <div class="relative">
+              <img src="../assets/cmc-resized.png" alt="CMC Logo" class="h-8">
+              <span class="spec-label" style="bottom: -20px; left: 50%; transform: translateX(-50%);">32x32px</span>
+            </div>
+            <span class="text-white font-semibold text-sm">CMC</span>
+          </div>
+
+          <div class="flex items-center gap-8 relative">
+            <span class="spec-label" style="top: -20px; left: 50%; transform: translateX(-50%);">gap: 32px</span>
+            <a href="#" class="text-gray-300 text-sm">What We Do</a>
+            <a href="#" class="text-gray-300 text-sm">About</a>
+            <a href="#" class="text-gray-300 text-sm">Blog</a>
+            <a href="#" class="text-gray-300 text-sm">Our Team</a>
+          </div>
+
+          <a href="#" class="inline-flex items-center gap-2 bg-white text-black text-sm font-semibold px-5 py-2.5 rounded-full relative">
+            Contact Us
+            <span class="spec-label" style="bottom: -24px; left: 50%; transform: translateX(-50%);">px-5 py-2.5 | radius: full</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-8 grid grid-cols-2 gap-6">
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-2">Token Mapping</h4>
+          <table class="w-full text-xs">
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Background</td><td class="py-1.5 text-cyan-400 font-mono">bg-black/90 backdrop-blur-md</td></tr>
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Border</td><td class="py-1.5 text-cyan-400 font-mono">border-gray-800/50</td></tr>
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Links</td><td class="py-1.5 text-cyan-400 font-mono">text-gray-300 text-sm font-medium</td></tr>
+            <tr><td class="py-1.5 text-gray-400">CTA Button</td><td class="py-1.5 text-cyan-400 font-mono">bg-white text-black rounded-full</td></tr>
+          </table>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-2">States</h4>
+          <table class="w-full text-xs">
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Default</td><td class="py-1.5 text-white">Transparent background</td></tr>
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Scrolled</td><td class="py-1.5 text-white">bg-black/90 + border-bottom</td></tr>
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Link Hover</td><td class="py-1.5 text-white">text-white (or text-cyan-400)</td></tr>
+            <tr><td class="py-1.5 text-gray-400">Mobile</td><td class="py-1.5 text-white">Hamburger menu, slide-out panel</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       3. HERO SPEC
+       ============================================ -->
+  <section id="spec-hero" class="mb-20">
+    <h2 class="text-2xl font-bold mb-6">3. Hero Sections</h2>
+
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+      <h3 class="text-white font-semibold mb-4">Home Hero</h3>
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <table class="w-full text-xs">
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Min Height</td><td class="py-1.5 text-white font-mono">90vh</td></tr>
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Overlay</td><td class="py-1.5 text-white font-mono">gradient: black/70 -> black/30 -> black/80</td></tr>
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Heading</td><td class="py-1.5 text-white font-mono">text-6xl lg:text-7xl / font-extrabold / uppercase</td></tr>
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Max Width</td><td class="py-1.5 text-white font-mono">max-w-3xl (content area)</td></tr>
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Padding</td><td class="py-1.5 text-white font-mono">py-20 md:py-32 | px-6</td></tr>
+            <tr><td class="py-1.5 text-gray-400">CTA Margin</td><td class="py-1.5 text-white font-mono">mt-8 md:mt-12</td></tr>
+          </table>
+        </div>
+        <div>
+          <h4 class="text-gray-400 text-xs uppercase tracking-wider mb-2">Page Heroes</h4>
+          <table class="w-full text-xs">
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Min Height</td><td class="py-1.5 text-white font-mono">50vh (40vh Contact)</td></tr>
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Heading</td><td class="py-1.5 text-white font-mono">text-7xl lg:text-8xl / font-black / uppercase</td></tr>
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Alignment</td><td class="py-1.5 text-white font-mono">flex items-end (bottom aligned)</td></tr>
+            <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Padding</td><td class="py-1.5 text-white font-mono">pb-16 pt-32</td></tr>
+            <tr><td class="py-1.5 text-gray-400">Dot Grid</td><td class="py-1.5 text-white font-mono">3x3 grid, 2.5px dots, gap-1.5, cyan-500</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       4. BUTTONS SPEC
+       ============================================ -->
+  <section id="spec-buttons" class="mb-20">
+    <h2 class="text-2xl font-bold mb-6">4. Buttons</h2>
+
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+      <table class="w-full text-xs">
+        <thead>
+          <tr class="border-b border-gray-700">
+            <th class="py-2 text-left text-gray-500 uppercase tracking-wider">Variant</th>
+            <th class="py-2 text-left text-gray-500 uppercase tracking-wider">Padding</th>
+            <th class="py-2 text-left text-gray-500 uppercase tracking-wider">Font</th>
+            <th class="py-2 text-left text-gray-500 uppercase tracking-wider">Radius</th>
+            <th class="py-2 text-left text-gray-500 uppercase tracking-wider">Colors</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-800">
+            <td class="py-2 text-white">Primary (Pill)</td>
+            <td class="py-2 text-gray-300 font-mono">px-6 py-3</td>
+            <td class="py-2 text-gray-300 font-mono">14px / semibold</td>
+            <td class="py-2 text-gray-300 font-mono">full</td>
+            <td class="py-2 text-gray-300 font-mono">bg-white text-black</td>
+          </tr>
+          <tr class="border-b border-gray-800">
+            <td class="py-2 text-white">Primary Small</td>
+            <td class="py-2 text-gray-300 font-mono">px-4 py-2</td>
+            <td class="py-2 text-gray-300 font-mono">12px / semibold</td>
+            <td class="py-2 text-gray-300 font-mono">full</td>
+            <td class="py-2 text-gray-300 font-mono">bg-white text-black</td>
+          </tr>
+          <tr class="border-b border-gray-800">
+            <td class="py-2 text-white">Secondary (Teal)</td>
+            <td class="py-2 text-gray-300 font-mono">px-6 py-3</td>
+            <td class="py-2 text-gray-300 font-mono">14px / semibold</td>
+            <td class="py-2 text-gray-300 font-mono">full</td>
+            <td class="py-2 text-gray-300 font-mono">bg-cyan-600 text-white</td>
+          </tr>
+          <tr class="border-b border-gray-800">
+            <td class="py-2 text-white">Outline White</td>
+            <td class="py-2 text-gray-300 font-mono">px-6 py-3</td>
+            <td class="py-2 text-gray-300 font-mono">14px / medium</td>
+            <td class="py-2 text-gray-300 font-mono">full</td>
+            <td class="py-2 text-gray-300 font-mono">border-white/30 text-white</td>
+          </tr>
+          <tr class="border-b border-gray-800">
+            <td class="py-2 text-white">Ghost Text</td>
+            <td class="py-2 text-gray-300 font-mono">0</td>
+            <td class="py-2 text-gray-300 font-mono">14px / medium</td>
+            <td class="py-2 text-gray-300 font-mono">n/a</td>
+            <td class="py-2 text-gray-300 font-mono">text-cyan-400</td>
+          </tr>
+          <tr class="border-b border-gray-800">
+            <td class="py-2 text-white">Form Submit</td>
+            <td class="py-2 text-gray-300 font-mono">px-6 py-3</td>
+            <td class="py-2 text-gray-300 font-mono">14px / medium</td>
+            <td class="py-2 text-gray-300 font-mono">full</td>
+            <td class="py-2 text-gray-300 font-mono">border-white text-white</td>
+          </tr>
+          <tr>
+            <td class="py-2 text-white">Icon Circle</td>
+            <td class="py-2 text-gray-300 font-mono">w-10 h-10</td>
+            <td class="py-2 text-gray-300 font-mono">icon 16px</td>
+            <td class="py-2 text-gray-300 font-mono">full</td>
+            <td class="py-2 text-gray-300 font-mono">bg-white/10 border-white/20</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="mt-6 p-4 bg-gray-800/50 rounded-lg">
+        <p class="text-gray-400 text-xs"><strong class="text-white">Hover Transitions:</strong> All buttons use <code class="text-cyan-400">transition-all duration-300</code>. Arrow icons translate 4px right on hover via <code class="text-cyan-400">group-hover:translate-x-1</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       5. CARDS SPEC
+       ============================================ -->
+  <section id="spec-cards" class="mb-20">
+    <h2 class="text-2xl font-bold mb-6">5. Cards</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Service Card Dark -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <h3 class="text-white font-semibold text-sm mb-4">Service Card (Dark)</h3>
+        <table class="w-full text-xs">
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Background</td><td class="py-1.5 text-white font-mono">bg-gray-900</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Border</td><td class="py-1.5 text-white font-mono">1px gray-800</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Top Gradient</td><td class="py-1.5 text-white font-mono">1px h, cyan-600 -> cyan-400</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Padding</td><td class="py-1.5 text-white font-mono">24px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Radius</td><td class="py-1.5 text-white font-mono">12px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Icon Container</td><td class="py-1.5 text-white font-mono">40x40px, bg-cyan-600/10, radius 8px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Title</td><td class="py-1.5 text-white font-mono">text-lg font-bold text-white</td></tr>
+          <tr><td class="py-1.5 text-gray-400">Description</td><td class="py-1.5 text-white font-mono">text-sm text-gray-400</td></tr>
+        </table>
+      </div>
+
+      <!-- Blog Card -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <h3 class="text-white font-semibold text-sm mb-4">Blog Card</h3>
+        <table class="w-full text-xs">
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Image Height</td><td class="py-1.5 text-white font-mono">192px (h-48)</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Image Radius</td><td class="py-1.5 text-white font-mono">12px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Image Hover</td><td class="py-1.5 text-white font-mono">scale(1.05) 500ms</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Gap (img to text)</td><td class="py-1.5 text-white font-mono">16px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Title</td><td class="py-1.5 text-white font-mono">text-base font-semibold text-white</td></tr>
+          <tr><td class="py-1.5 text-gray-400">Link</td><td class="py-1.5 text-white font-mono">text-sm text-cyan-400</td></tr>
+        </table>
+      </div>
+
+      <!-- Team Card -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <h3 class="text-white font-semibold text-sm mb-4">Team Card (Portrait)</h3>
+        <table class="w-full text-xs">
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Avatar Size</td><td class="py-1.5 text-white font-mono">128x128px</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Avatar Border</td><td class="py-1.5 text-white font-mono">ring-2 ring-gray-800</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Filter</td><td class="py-1.5 text-white font-mono">grayscale (hover: grayscale-0)</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Name</td><td class="py-1.5 text-white font-mono">text-sm font-semibold</td></tr>
+          <tr><td class="py-1.5 text-gray-400">Role</td><td class="py-1.5 text-white font-mono">text-xs text-gray-400</td></tr>
+        </table>
+      </div>
+
+      <!-- Stat Display -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <h3 class="text-white font-semibold text-sm mb-4">Stat Display</h3>
+        <table class="w-full text-xs">
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Number</td><td class="py-1.5 text-white font-mono">text-4xl/5xl font-black text-white</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Label</td><td class="py-1.5 text-white font-mono">text-sm text-gray-400</td></tr>
+          <tr class="border-b border-gray-800"><td class="py-1.5 text-gray-400">Gap</td><td class="py-1.5 text-white font-mono">8px (number to label)</td></tr>
+          <tr><td class="py-1.5 text-gray-400">Grid</td><td class="py-1.5 text-white font-mono">4 columns, gap-8</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       6. FORM ELEMENTS SPEC
+       ============================================ -->
+  <section id="spec-forms" class="mb-20">
+    <h2 class="text-2xl font-bold mb-6">6. Form Elements</h2>
+
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+      <table class="w-full text-xs">
+        <thead>
+          <tr class="border-b border-gray-700">
+            <th class="py-2 text-left text-gray-500 uppercase tracking-wider">Property</th>
+            <th class="py-2 text-left text-gray-500 uppercase tracking-wider">Default</th>
+            <th class="py-2 text-left text-gray-500 uppercase tracking-wider">Focus</th>
+            <th class="py-2 text-left text-gray-500 uppercase tracking-wider">Error</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-800">
+            <td class="py-2 text-white">Background</td>
+            <td class="py-2 text-gray-300 font-mono">gray-800/50</td>
+            <td class="py-2 text-gray-300 font-mono">gray-800/50</td>
+            <td class="py-2 text-gray-300 font-mono">gray-800/50</td>
+          </tr>
+          <tr class="border-b border-gray-800">
+            <td class="py-2 text-white">Border</td>
+            <td class="py-2 text-gray-300 font-mono">1px gray-700</td>
+            <td class="py-2 text-gray-300 font-mono">1px cyan-600 + ring-1</td>
+            <td class="py-2 text-gray-300 font-mono">1px red-500 + ring-1</td>
+          </tr>
+          <tr class="border-b border-gray-800">
+            <td class="py-2 text-white">Padding</td>
+            <td class="py-2 text-gray-300 font-mono">px-4 py-3 (16px 12px)</td>
+            <td class="py-2 text-gray-300 font-mono">same</td>
+            <td class="py-2 text-gray-300 font-mono">same</td>
+          </tr>
+          <tr class="border-b border-gray-800">
+            <td class="py-2 text-white">Radius</td>
+            <td class="py-2 text-gray-300 font-mono">8px</td>
+            <td class="py-2 text-gray-300 font-mono">8px</td>
+            <td class="py-2 text-gray-300 font-mono">8px</td>
+          </tr>
+          <tr class="border-b border-gray-800">
+            <td class="py-2 text-white">Text</td>
+            <td class="py-2 text-gray-300 font-mono">14px white</td>
+            <td class="py-2 text-gray-300 font-mono">14px white</td>
+            <td class="py-2 text-gray-300 font-mono">14px white</td>
+          </tr>
+          <tr>
+            <td class="py-2 text-white">Placeholder</td>
+            <td class="py-2 text-gray-300 font-mono">14px gray-500</td>
+            <td class="py-2 text-gray-300 font-mono">14px gray-500</td>
+            <td class="py-2 text-gray-300 font-mono">14px gray-500</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="mt-4 p-4 bg-gray-800/50 rounded-lg">
+        <p class="text-gray-400 text-xs"><strong class="text-white">Label:</strong> <code class="text-cyan-400">text-sm font-medium text-white mb-2</code>. <strong class="text-white">Error message:</strong> <code class="text-cyan-400">text-xs text-red-400 mt-2</code>. <strong class="text-white">Textarea:</strong> Same styles, <code class="text-cyan-400">rows="5" resize-none</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       7. FOOTER SPEC
+       ============================================ -->
+  <section id="spec-footer" class="mb-20">
+    <h2 class="text-2xl font-bold mb-6">7. Footer</h2>
+
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+      <table class="w-full text-xs">
+        <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Background</td><td class="py-2 text-white font-mono">bg-black</td></tr>
+        <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Top Border</td><td class="py-2 text-white font-mono">border-t border-gray-800</td></tr>
+        <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Padding</td><td class="py-2 text-white font-mono">py-16 px-6</td></tr>
+        <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Logo Size</td><td class="py-2 text-white font-mono">40x40px circle</td></tr>
+        <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Social Icons</td><td class="py-2 text-white font-mono">32x32px circles, bg-gray-800, gap-4</td></tr>
+        <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Nav Links</td><td class="py-2 text-white font-mono">text-sm text-gray-300, gap-3 vertical</td></tr>
+        <tr class="border-b border-gray-800"><td class="py-2 text-gray-400">Section Label</td><td class="py-2 text-white font-mono">text-xs text-gray-500 uppercase tracking-wider</td></tr>
+        <tr><td class="py-2 text-gray-400">Copyright</td><td class="py-2 text-white font-mono">text-xs text-gray-600 center</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============================================
+       8. TOKEN MAPPING
+       ============================================ -->
+  <section id="spec-tokens" class="mb-20">
+    <h2 class="text-2xl font-bold mb-6">8. Complete Token Mapping</h2>
+    <p class="text-gray-400 text-sm mb-6">Map these tokens directly to Figma styles. Use the <code class="text-cyan-400 font-mono">tokens.json</code> file with the Figma Tokens plugin for automated import.</p>
+
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+      <h3 class="text-white font-semibold mb-4">Figma Import Instructions</h3>
+      <ol class="space-y-3 text-gray-400 text-sm">
+        <li class="flex items-start gap-3">
+          <span class="flex-shrink-0 w-6 h-6 bg-cyan-600 rounded-full flex items-center justify-center text-white text-xs font-bold">1</span>
+          Install the "Figma Tokens" plugin from the Figma community.
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="flex-shrink-0 w-6 h-6 bg-cyan-600 rounded-full flex items-center justify-center text-white text-xs font-bold">2</span>
+          Open the plugin and go to Settings > Import tokens from JSON.
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="flex-shrink-0 w-6 h-6 bg-cyan-600 rounded-full flex items-center justify-center text-white text-xs font-bold">3</span>
+          Upload <code class="text-cyan-400">tokens/tokens.json</code> from this design system package.
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="flex-shrink-0 w-6 h-6 bg-cyan-600 rounded-full flex items-center justify-center text-white text-xs font-bold">4</span>
+          The plugin will create all color styles, text styles, and spacing variables automatically.
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="flex-shrink-0 w-6 h-6 bg-cyan-600 rounded-full flex items-center justify-center text-white text-xs font-bold">5</span>
+          Apply styles to components using the reference names (e.g., <code class="text-cyan-400">color.brand.primary</code>).
+        </li>
+      </ol>
+    </div>
+  </section>
+
+</div>
+
+<script>
+// Hex code copy functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const hexPattern = /#[0-9A-Fa-f]{6}\b/g;
+
+  const walkTextNodes = (node) => {
+    if (node.nodeType === 3) { // Text node
+      const text = node.textContent;
+      const matches = text.match(hexPattern);
+      if (matches) {
+        const span = document.createElement('span');
+        let lastIndex = 0;
+        let html = '';
+
+        text.replace(hexPattern, (match, offset) => {
+          html += text.substring(lastIndex, offset);
+          html += `<button class="hex-code-btn" data-hex="${match}" title="Click to copy ${match}">${match}</button>`;
+          lastIndex = offset + match.length;
+        });
+        html += text.substring(lastIndex);
+
+        span.innerHTML = html;
+        node.parentNode.replaceChild(span, node);
+      }
+    } else if (node.nodeType === 1 && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
+      Array.from(node.childNodes).forEach(walkTextNodes);
+    }
+  };
+
+  walkTextNodes(document.body);
+
+  // Add click handlers
+  document.querySelectorAll('.hex-code-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const hex = btn.getAttribute('data-hex');
+
+      navigator.clipboard.writeText(hex).then(() => {
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.style.background = '#22d3ee';
+        btn.style.color = '#000';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.style.color = '';
+        }, 1500);
+      }).catch(() => {
+        const textarea = document.createElement('textarea');
+        textarea.value = hex;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = hex; }, 1500);
+      });
+    });
+  });
+});
+</script>
+
+</body>
+</html>

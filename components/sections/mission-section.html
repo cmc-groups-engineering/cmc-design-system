@@ -1,0 +1,144 @@
+<!--
+  CMC Design System - Mission / Values Section
+
+  Description: Mission statement and value propositions in various layouts.
+  Used on: WhatWeDo (Our Mission), OurTeam (Our Mission)
+  Variants: Simple text, With image, Card grid
+
+  Dependencies: Tailwind CSS CDN
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="bg-black font-sans">
+
+<div class="max-w-7xl mx-auto py-20 px-6 space-y-24">
+
+  <!-- ============================================
+       VARIANT 1: Simple Mission Statement (OurTeam)
+       ============================================ -->
+  <section>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 uppercase">OUR MISSION</h2>
+    <div class="max-w-3xl">
+      <p class="text-gray-400 text-lg leading-relaxed mb-6">
+        At CMC Group, our mission is to empower businesses through innovative customer acquisition strategies while developing the next generation of entrepreneurial leaders.
+      </p>
+      <p class="text-gray-400 leading-relaxed">
+        We believe that when you invest in people, success follows. Our team-first approach ensures that every individual has the tools, training, and support they need to excel.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VARIANT 2: Mission with Image Grid (WhatWeDo)
+       ============================================ -->
+  <section>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 uppercase">OUR MISSION</h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-gray-400 leading-relaxed mb-6">
+          We are committed to delivering exceptional results for our partners while creating meaningful career opportunities for our team members. Our mission drives everything we do, from how we train our people to how we serve our clients.
+        </p>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-gray-300 text-sm">Deliver measurable results for every client partnership</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-gray-300 text-sm">Develop future business leaders through hands-on experience</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-gray-300 text-sm">Foster a culture of integrity, collaboration, and excellence</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-gray-300 text-sm">Expand into new markets with innovative strategies</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="rounded-xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400" alt="" class="w-full h-48 object-cover" />
+        </div>
+        <div class="rounded-xl overflow-hidden mt-8">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="" class="w-full h-48 object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VARIANT 3: Cornerstone Academy Section (OurTeam)
+       Featured program / initiative highlight
+       ============================================ -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="rounded-2xl overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"
+        alt="Training session"
+        class="w-full h-80 lg:h-96 object-cover"
+      />
+    </div>
+    <div>
+      <span class="text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-2 block">Program Highlight</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Cornerstone Academy: Training Tomorrow's Leaders
+      </h2>
+      <p class="text-gray-400 leading-relaxed mb-6">
+        Our flagship leadership development program combines classroom learning with hands-on experience, preparing team members for management and business ownership roles.
+      </p>
+      <a href="#" class="inline-flex items-center gap-2 bg-white text-black text-sm font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition-all group">
+        Learn More
+        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VARIANT 4: Where Performance Meets Partnership (AboutUs)
+       Text section with button pair
+       ============================================ -->
+  <section class="border border-gray-800 rounded-2xl p-8 md:p-12">
+    <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Where Performance Meets Partnership</h2>
+    <p class="text-gray-400 leading-relaxed mb-8 max-w-3xl">
+      At CMC Group, we don't just deliver results, we build lasting partnerships. Our success is measured not only by the numbers, but by the strength of our relationships and the growth of our people.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="#" class="inline-flex items-center gap-2 bg-white text-black text-sm font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition-all">
+        Get Started
+      </a>
+      <a href="#" class="inline-flex items-center gap-2 border border-white/30 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-white/5 transition-all">
+        Learn More
+      </a>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

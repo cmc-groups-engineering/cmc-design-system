@@ -1,0 +1,163 @@
+<!--
+  CMC Design System - Typography Components
+
+  Description: All heading styles, body text, labels, captions, and text patterns.
+  Used on: All pages
+  Tokens: font-family-heading, font-family-body, all font sizes/weights
+
+  Dependencies: Tailwind CSS CDN
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="bg-black font-sans p-12">
+
+<div class="max-w-5xl mx-auto space-y-16">
+
+  <!-- ============================================
+       DISPLAY / HERO HEADINGS
+       Used on hero sections and page titles
+       ============================================ -->
+  <section>
+    <h3 class="text-gray-500 text-xs uppercase tracking-widest mb-6 border-b border-gray-800 pb-3">Display / Hero Headings</h3>
+
+    <div class="space-y-6">
+      <h1 class="text-7xl md:text-8xl font-black text-white leading-none tracking-tight uppercase">
+        DISPLAY HEADING
+      </h1>
+      <p class="text-gray-500 text-xs font-mono">text-7xl/8xl | font-black | tracking-tight | uppercase | leading-none</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION HEADINGS
+       Used for major section titles
+       ============================================ -->
+  <section>
+    <h3 class="text-gray-500 text-xs uppercase tracking-widest mb-6 border-b border-gray-800 pb-3">Section Headings</h3>
+
+    <div class="space-y-8">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold text-white uppercase mb-2">SECTION HEADING H2</h2>
+        <p class="text-gray-500 text-xs font-mono">text-4xl/5xl | font-bold | uppercase</p>
+      </div>
+
+      <div>
+        <h3 class="text-3xl font-bold text-white uppercase mb-2">SUBSECTION HEADING H3</h3>
+        <p class="text-gray-500 text-xs font-mono">text-3xl | font-bold | uppercase</p>
+      </div>
+
+      <div>
+        <h4 class="text-2xl font-bold text-white mb-2">Section Subtitle H4</h4>
+        <p class="text-gray-500 text-xs font-mono">text-2xl | font-bold</p>
+      </div>
+
+      <div>
+        <h5 class="text-xl font-semibold text-white mb-2">Component Heading H5</h5>
+        <p class="text-gray-500 text-xs font-mono">text-xl | font-semibold</p>
+      </div>
+
+      <div>
+        <h6 class="text-lg font-semibold text-white mb-2">Card Heading H6</h6>
+        <p class="text-gray-500 text-xs font-mono">text-lg | font-semibold</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BODY TEXT
+       ============================================ -->
+  <section>
+    <h3 class="text-gray-500 text-xs uppercase tracking-widest mb-6 border-b border-gray-800 pb-3">Body Text</h3>
+
+    <div class="space-y-8">
+      <div>
+        <p class="text-lg text-white leading-relaxed mb-2">Large body text - Used for featured paragraphs and lead text in hero sections and testimonials.</p>
+        <p class="text-gray-500 text-xs font-mono">text-lg | text-white | leading-relaxed</p>
+      </div>
+
+      <div>
+        <p class="text-base text-gray-300 leading-relaxed mb-2">Regular body text - The standard body copy used throughout the site. This is the default size for paragraph text, descriptions, and general content blocks across all pages.</p>
+        <p class="text-gray-500 text-xs font-mono">text-base | text-gray-300 | leading-relaxed</p>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-400 leading-relaxed mb-2">Small body text - Used for card descriptions, supporting text, and secondary content. This size provides good readability while being compact enough for dense layouts.</p>
+        <p class="text-gray-500 text-xs font-mono">text-sm | text-gray-400 | leading-relaxed</p>
+      </div>
+
+      <div>
+        <p class="text-xs text-gray-500 leading-relaxed mb-2">Caption text - Used for meta information, timestamps, labels, and fine print. This smallest text size is for supplementary information.</p>
+        <p class="text-gray-500 text-xs font-mono">text-xs | text-gray-500 | leading-relaxed</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SPECIAL TEXT STYLES
+       ============================================ -->
+  <section>
+    <h3 class="text-gray-500 text-xs uppercase tracking-widest mb-6 border-b border-gray-800 pb-3">Special Text Styles</h3>
+
+    <div class="space-y-8">
+      <!-- Section Label / Overline -->
+      <div>
+        <p class="text-xs text-cyan-400 uppercase tracking-widest font-semibold mb-2">Section Label / Overline</p>
+        <p class="text-gray-500 text-xs font-mono">text-xs | text-cyan-400 | uppercase | tracking-widest | font-semibold</p>
+      </div>
+
+      <!-- Stat Number -->
+      <div>
+        <p class="text-5xl font-black text-white mb-2">500+</p>
+        <p class="text-gray-500 text-xs font-mono">text-5xl | font-black | text-white</p>
+      </div>
+
+      <!-- Accent Text -->
+      <div>
+        <p class="text-base text-cyan-400 font-medium mb-2">Accent text used for highlights and links</p>
+        <p class="text-gray-500 text-xs font-mono">text-base | text-cyan-400 | font-medium</p>
+      </div>
+
+      <!-- Link Style -->
+      <div>
+        <a href="#" class="text-sm text-cyan-400 hover:text-cyan-300 underline transition-colors mb-2 inline-block">Underlined link style</a>
+        <p class="text-gray-500 text-xs font-mono mt-1">text-sm | text-cyan-400 | underline | hover:text-cyan-300</p>
+      </div>
+
+      <!-- Muted Label -->
+      <div>
+        <p class="text-xs text-gray-500 uppercase tracking-wider mb-2">Muted Label (e.g., "Office", "Mail", "Phone")</p>
+        <p class="text-gray-500 text-xs font-mono">text-xs | text-gray-500 | uppercase | tracking-wider</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ON LIGHT BACKGROUND
+       ============================================ -->
+  <section class="bg-white rounded-2xl p-12">
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-6 border-b border-gray-200 pb-3">On Light Background</h3>
+
+    <div class="space-y-6">
+      <h2 class="text-3xl font-bold text-gray-900 uppercase">Section Heading</h2>
+      <p class="text-gray-600 leading-relaxed">Body text on light background. Used in the white service card sections and other light-themed areas of the site.</p>
+      <p class="text-gray-500 text-sm">Secondary text on light background with reduced emphasis.</p>
+      <p class="text-gray-400 text-xs">Caption text on light background for meta information.</p>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

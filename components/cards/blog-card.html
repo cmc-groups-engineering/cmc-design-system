@@ -1,0 +1,135 @@
+<!--
+  CMC Design System - Blog Card Components
+
+  Description: Blog post preview cards with image, title, excerpt, and meta.
+  Used on: HomePage (Blog section)
+  Variants: Image top, horizontal, featured
+
+  Dependencies: Tailwind CSS CDN
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Cards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="bg-black font-sans p-12">
+
+<div class="max-w-7xl mx-auto space-y-20">
+
+  <!-- ============================================
+       Blog Section Header
+       ============================================ -->
+  <div>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">BLOG</h2>
+
+    <!-- ============================================
+         VARIANT 1: Standard Blog Card Grid (3 columns)
+         ============================================ -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <article class="group cursor-pointer">
+        <div class="overflow-hidden rounded-xl mb-4">
+          <img
+            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600"
+            alt="Blog post"
+            class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base mb-2 group-hover:text-cyan-400 transition-colors">
+            How to Build a Team and Create Customers With Our People
+          </h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-2">
+            Learn how our team-first approach to customer acquisition drives sustainable business growth.
+          </p>
+          <span class="text-cyan-400 text-sm font-medium group-hover:underline">Read More</span>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="group cursor-pointer">
+        <div class="overflow-hidden rounded-xl mb-4">
+          <img
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600"
+            alt="Blog post"
+            class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base mb-2 group-hover:text-cyan-400 transition-colors">
+            Three Key Pillars to Understanding and Planning The Business
+          </h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-2">
+            Discover the essential pillars that form the foundation of successful business planning.
+          </p>
+          <span class="text-cyan-400 text-sm font-medium group-hover:underline">Read More</span>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="group cursor-pointer">
+        <div class="overflow-hidden rounded-xl mb-4">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600"
+            alt="Blog post"
+            class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base mb-2 group-hover:text-cyan-400 transition-colors">
+            What Types Stage of a Leader Should You Work in Your Firm
+          </h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-2">
+            Understanding the different leadership stages and how to develop leaders at every level.
+          </p>
+          <span class="text-cyan-400 text-sm font-medium group-hover:underline">Read More</span>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- ============================================
+       VARIANT 2: Featured Blog Card (Horizontal)
+       ============================================ -->
+  <div>
+    <article class="group cursor-pointer bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800"
+            alt="Featured blog post"
+            class="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <div class="p-8 md:p-12 flex flex-col justify-center">
+          <span class="text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">Featured</span>
+          <h3 class="text-white font-bold text-2xl mb-4 group-hover:text-cyan-400 transition-colors">
+            How to Build a Team and Create Customers With Our People
+          </h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">
+            Learn how our team-first approach to customer acquisition drives sustainable business growth and creates lasting partnerships.
+          </p>
+          <a href="#" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium group-hover:gap-3 transition-all">
+            Read More
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+</div>
+
+</body>
+</html>

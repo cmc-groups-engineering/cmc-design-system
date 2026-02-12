@@ -1,0 +1,107 @@
+<!--
+  CMC Design System - Page Hero Component
+
+  Description: Interior page hero with large title text on dark/image background.
+  Used on: AboutUs, WhatWeDo, OurTeam, ContactUs
+  Variants: Dark background, Image background, Contact style
+
+  Dependencies: Tailwind CSS CDN
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero - Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="bg-black font-sans">
+
+<!-- ============================================
+     VARIANT 1: About Page Hero (Dark with gradient)
+     ============================================ -->
+<section class="relative min-h-[50vh] flex items-end overflow-hidden bg-black">
+  <div class="absolute inset-0 bg-gradient-to-b from-black via-gray-900/50 to-black"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 pb-16 pt-32">
+    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-none tracking-tight uppercase">
+      ABOUT THE<br>FIRM
+    </h1>
+  </div>
+</section>
+
+<div class="h-16 bg-black"></div>
+
+<!-- ============================================
+     VARIANT 2: What We Do Hero (Image background)
+     ============================================ -->
+<section class="relative min-h-[50vh] flex items-end overflow-hidden">
+  <div class="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920"
+      alt="Team collaboration"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 pb-16 pt-32">
+    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-none tracking-tight uppercase">
+      WHAT WE DO
+    </h1>
+  </div>
+  <!-- Teal accent dots in top right -->
+  <div class="absolute top-8 right-8 grid grid-cols-3 gap-1.5 z-10">
+    <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+    <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+    <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+    <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+    <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+    <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+    <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+    <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+    <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+  </div>
+</section>
+
+<div class="h-16 bg-black"></div>
+
+<!-- ============================================
+     VARIANT 3: Our Team Hero (Image background)
+     ============================================ -->
+<section class="relative min-h-[50vh] flex items-end overflow-hidden">
+  <div class="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920"
+      alt="Our team"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 pb-16 pt-32">
+    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-none tracking-tight uppercase">
+      THE PEOPLE BEHIND<br>OUR SUCCESS
+    </h1>
+  </div>
+</section>
+
+<div class="h-16 bg-black"></div>
+
+<!-- ============================================
+     VARIANT 4: Contact Us Hero (Minimal dark gradient)
+     ============================================ -->
+<section class="relative min-h-[40vh] flex items-end overflow-hidden bg-black">
+  <div class="absolute inset-0 bg-gradient-to-b from-gray-900/30 via-black to-black"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 pb-12 pt-32">
+    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-none tracking-tight uppercase">
+      CONTACT US
+    </h1>
+  </div>
+</section>
+
+</body>
+</html>

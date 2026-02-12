@@ -1,0 +1,119 @@
+<!--
+  CMC Design System - Section Dividers & Decorative Elements
+
+  Description: Visual dividers, dot patterns, and decorative accents between sections.
+  Used on: All pages
+  Variants: Line divider, Teal dot grid, Gradient fade, Spacing block
+
+  Dependencies: Tailwind CSS CDN
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section Dividers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="bg-black font-sans p-12">
+
+<div class="max-w-5xl mx-auto space-y-20">
+
+  <!-- ============================================
+       VARIANT 1: Simple Line Divider
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-6">Line Divider</h3>
+    <div class="h-px bg-gray-800"></div>
+  </div>
+
+  <!-- ============================================
+       VARIANT 2: Teal Accent Line
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-6">Teal Accent Line</h3>
+    <div class="h-px bg-gradient-to-r from-transparent via-cyan-600 to-transparent"></div>
+  </div>
+
+  <!-- ============================================
+       VARIANT 3: Teal Dot Grid Pattern
+       Used in WhatWeDo hero and as decorative accents
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-6">Teal Dot Grid (3x3)</h3>
+    <div class="grid grid-cols-3 gap-2 w-fit">
+      <div class="w-2.5 h-2.5 bg-cyan-500 rounded-full"></div>
+      <div class="w-2.5 h-2.5 bg-cyan-500 rounded-full"></div>
+      <div class="w-2.5 h-2.5 bg-cyan-500 rounded-full"></div>
+      <div class="w-2.5 h-2.5 bg-cyan-500 rounded-full"></div>
+      <div class="w-2.5 h-2.5 bg-cyan-500 rounded-full"></div>
+      <div class="w-2.5 h-2.5 bg-cyan-500 rounded-full"></div>
+      <div class="w-2.5 h-2.5 bg-cyan-500 rounded-full"></div>
+      <div class="w-2.5 h-2.5 bg-cyan-500 rounded-full"></div>
+      <div class="w-2.5 h-2.5 bg-cyan-500 rounded-full"></div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       VARIANT 4: Section Spacing Block
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-6">Section Spacing</h3>
+    <div class="space-y-4">
+      <div class="flex items-center gap-4">
+        <div class="bg-cyan-600/20 h-4 w-full rounded"></div>
+        <span class="text-gray-500 text-xs font-mono whitespace-nowrap">py-4 (16px)</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="bg-cyan-600/20 h-8 w-full rounded"></div>
+        <span class="text-gray-500 text-xs font-mono whitespace-nowrap">py-8 (32px)</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="bg-cyan-600/20 h-16 w-full rounded"></div>
+        <span class="text-gray-500 text-xs font-mono whitespace-nowrap">py-16 (64px)</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="bg-cyan-600/20 h-20 w-full rounded"></div>
+        <span class="text-gray-500 text-xs font-mono whitespace-nowrap">py-20 (80px)</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="bg-cyan-600/20 h-24 w-full rounded"></div>
+        <span class="text-gray-500 text-xs font-mono whitespace-nowrap">py-24 (96px)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       VARIANT 5: Card Top Border Gradient (used on service cards)
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-6">Card Top Border Gradient</h3>
+    <div class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 p-6">
+      <div class="h-1 bg-gradient-to-r from-cyan-600 to-cyan-400 -mx-6 -mt-6 mb-6"></div>
+      <p class="text-gray-400 text-sm">This 1px gradient border sits at the top of dark service cards.</p>
+    </div>
+  </div>
+
+  <!-- ============================================
+       VARIANT 6: Scroll/Pagination Dots
+       ============================================ -->
+  <div>
+    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-6">Pagination Dots</h3>
+    <div class="flex gap-2 justify-center">
+      <div class="w-2 h-2 bg-white rounded-full"></div>
+      <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+      <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+      <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

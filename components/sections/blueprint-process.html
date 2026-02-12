@@ -1,0 +1,186 @@
+<!--
+  CMC Design System - Blueprint / Process Steps Section
+
+  Description: Multi-step process display with numbered items and descriptions.
+  Used on: WhatWeDo (The Blueprint for Performance)
+  Variants: Horizontal steps, Vertical timeline, Grid
+
+  Dependencies: Tailwind CSS CDN
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blueprint / Process Steps</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="bg-black font-sans">
+
+<div class="max-w-7xl mx-auto py-20 px-6 space-y-24">
+
+  <!-- ============================================
+       VARIANT 1: Horizontal Process Steps (WhatWeDo)
+       "THE BLUEPRINT FOR PERFORMANCE"
+       ============================================ -->
+  <section>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 uppercase">THE BLUEPRINT FOR PERFORMANCE</h2>
+    <div class="h-px bg-gray-800 mb-12"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Step 1 -->
+      <div class="relative">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-cyan-400 text-xs font-bold uppercase tracking-wider">Strategy</span>
+          <div class="hidden lg:block flex-1 h-px bg-gray-800"></div>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-2">Planning</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          We develop tailored strategies that align with your business objectives and market conditions.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-cyan-400 text-xs font-bold uppercase tracking-wider">Deploy</span>
+          <div class="hidden lg:block flex-1 h-px bg-gray-800"></div>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-2">Execution</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Our trained teams deploy rapidly, bringing expertise and energy to every customer interaction.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-cyan-400 text-xs font-bold uppercase tracking-wider">Optimize</span>
+          <div class="hidden lg:block flex-1 h-px bg-gray-800"></div>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-2">Performance</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Continuous monitoring and optimization ensure maximum results and return on investment.
+        </p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="relative">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-cyan-400 text-xs font-bold uppercase tracking-wider">Scale</span>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-2">Growth</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Proven models that scale efficiently, expanding your reach into new markets and territories.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VARIANT 2: Numbered Process Steps with Cards
+       ============================================ -->
+  <section>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 uppercase">OUR PROCESS</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Step 1 -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 relative overflow-hidden group hover:border-cyan-600/30 transition-all">
+        <div class="absolute top-4 right-4 text-6xl font-black text-gray-800/50 group-hover:text-cyan-600/10 transition-colors">01</div>
+        <div class="relative z-10">
+          <div class="w-10 h-10 bg-cyan-600 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white font-bold text-sm">1</span>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-3">Discovery</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            We analyze your market, audience, and goals to create a customized acquisition strategy.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 relative overflow-hidden group hover:border-cyan-600/30 transition-all">
+        <div class="absolute top-4 right-4 text-6xl font-black text-gray-800/50 group-hover:text-cyan-600/10 transition-colors">02</div>
+        <div class="relative z-10">
+          <div class="w-10 h-10 bg-cyan-600 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white font-bold text-sm">2</span>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-3">Implementation</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Trained teams execute your campaign with precision, professionalism, and measurable KPIs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 relative overflow-hidden group hover:border-cyan-600/30 transition-all">
+        <div class="absolute top-4 right-4 text-6xl font-black text-gray-800/50 group-hover:text-cyan-600/10 transition-colors">03</div>
+        <div class="relative z-10">
+          <div class="w-10 h-10 bg-cyan-600 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white font-bold text-sm">3</span>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-3">Scale & Optimize</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Based on data and feedback, we scale what works and optimize for continuous improvement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VARIANT 3: Career Path / Leadership Path (OurTeam)
+       Vertical timeline style
+       ============================================ -->
+  <section>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 uppercase">Your Path to Leadership Starts Here</h2>
+
+    <div class="relative pl-8 border-l-2 border-gray-800 space-y-12">
+      <!-- Step 1 -->
+      <div class="relative">
+        <div class="absolute -left-[2.55rem] w-5 h-5 bg-cyan-600 rounded-full border-4 border-black"></div>
+        <h3 class="text-white font-bold text-lg mb-2">Entry Level</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Day one, every team member at CMC Group steps into a clear, structured path for advancement: performance, discipline, and leadership at every level.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative">
+        <div class="absolute -left-[2.55rem] w-5 h-5 bg-cyan-600 rounded-full border-4 border-black"></div>
+        <h3 class="text-white font-bold text-lg mb-2">Team Leader</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          After demonstrating consistent performance, you take on mentoring responsibilities and help drive team results.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative">
+        <div class="absolute -left-[2.55rem] w-5 h-5 bg-cyan-600 rounded-full border-4 border-black"></div>
+        <h3 class="text-white font-bold text-lg mb-2">Assistant Manager</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Develop business acumen while managing daily operations and supporting your team's growth.
+        </p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="relative">
+        <div class="absolute -left-[2.55rem] w-5 h-5 bg-cyan-500 rounded-full border-4 border-black shadow-[0_0_12px_rgba(34,211,238,0.5)]"></div>
+        <h3 class="text-white font-bold text-lg mb-2">Business Owner</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          The ultimate goal: running your own branch with full autonomy, backed by CMC's proven systems and support.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+/* CMC Design System Documentation Styles */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Code blocks */
+.code-block {
+  position: relative;
+  background: #0d1117;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.code-block pre {
+  padding: 1.25rem;
+  overflow-x: auto;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: #e6edf3;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.code-block .copy-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #9ca3af;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.code-block .copy-btn:hover {
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+/* Component preview */
+.component-preview {
+  background: #000;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.component-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #1f2937;
+  background: #0a0a0a;
+}
+
+.component-preview-body {
+  padding: 2rem;
+}
+
+/* Sidebar */
+.sidebar-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  transition: all 0.15s;
+  text-decoration: none;
+}
+
+.sidebar-link:hover {
+  color: white;
+  background: rgba(255,255,255,0.05);
+}
+
+.sidebar-link.active {
+  color: #22d3ee;
+  background: rgba(8,145,178,0.1);
+}
+
+/* Color swatch */
+.color-swatch {
+  width: 100%;
+  height: 64px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Token table */
+.token-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.token-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  border-bottom: 1px solid #1f2937;
+}
+
+.token-table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #111827;
+  color: #d1d5db;
+}
+
+.token-table tr:hover td {
+  background: rgba(255,255,255,0.02);
+}
+
+/* Search */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  margin-top: 4px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 50;
+  display: none;
+}
+
+.search-results.active {
+  display: block;
+}
+
+.search-result-item {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.search-result-item:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* Responsive sidebar */
+@media (max-width: 1023px) {
+  .docs-sidebar {
+    display: none;
+  }
+  .docs-sidebar.open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    background: #000;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+}
+
+/* Hex code buttons */
+.hex-code-btn {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: inherit;
+  background: rgba(8, 145, 178, 0.15);
+  border: 1px solid rgba(8, 145, 178, 0.3);
+  color: #22d3ee;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.hex-code-btn:hover {
+  background: rgba(8, 145, 178, 0.25);
+  border-color: #22d3ee;
+  transform: translateY(-1px);
+}
+
+.hex-code-btn:active {
+  transform: translateY(0);
+}

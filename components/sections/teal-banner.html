@@ -1,0 +1,88 @@
+<!--
+  CMC Design System - Teal Banner / CTA Section
+
+  Description: Full-width teal/cyan banner with text, used as call-to-action or highlight.
+  Used on: HomePage (Award Winning), All Pages (footer CTA)
+  Variants: Award banner, Footer CTA, Mission statement
+
+  Dependencies: Tailwind CSS CDN
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teal Banner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="bg-black font-sans">
+
+<div class="space-y-16 py-16">
+
+  <!-- ============================================
+       VARIANT 1: Award Banner (HomePage)
+       Full-width teal background with centered text
+       ============================================ -->
+  <section class="bg-gradient-to-r from-cyan-700 via-cyan-600 to-cyan-700 py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 uppercase">
+        PROUD TO BE AN AWARD WINNING<br>SOLUTIONS PROVIDER
+      </h2>
+      <p class="text-cyan-100/80 max-w-2xl mx-auto leading-relaxed">
+        CMC Group has been recognized for outstanding performance in growth, client relationships, and leadership development. These awards reflect the hard work of our entire team.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VARIANT 2: Footer CTA Banner (All pages)
+       Teal banner above footer with business message
+       ============================================ -->
+  <section class="bg-cyan-700 py-10 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <p class="text-white text-sm md:text-base leading-relaxed">
+        We place your business goals at the forefront of our strategy, prioritizing collaboration and consistent feedback to guarantee that every campaign aligns with your vision.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VARIANT 3: Mission Statement Banner
+       ============================================ -->
+  <section class="bg-gradient-to-r from-cyan-800 to-cyan-600 py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-cyan-200 text-xs uppercase tracking-widest font-semibold mb-4 block">Our Mission</span>
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">
+        Empowering businesses through innovative customer acquisition strategies and developing the next generation of leaders.
+      </h2>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+        <a href="#" class="inline-flex items-center gap-2 bg-white text-cyan-700 text-sm font-semibold px-6 py-3 rounded-full hover:bg-cyan-50 transition-all">
+          Get Started
+        </a>
+        <a href="#" class="inline-flex items-center gap-2 border border-white/40 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-white/10 transition-all">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VARIANT 4: Thin Accent Banner
+       ============================================ -->
+  <section class="bg-cyan-600 py-4 px-6">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <p class="text-white text-sm font-medium">Ready to scale your business? Let's talk.</p>
+      <a href="#" class="text-white text-sm font-semibold underline hover:no-underline">Contact Us</a>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

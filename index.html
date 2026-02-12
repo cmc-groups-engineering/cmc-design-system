@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMC Group Design System - Documentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/docs.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+          colors: {
+            'cmc-primary': '#0891B2',
+            'cmc-primary-light': '#22D3EE',
+            'cmc-primary-dark': '#0E7490',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-black font-sans text-white">
+
+<!-- ============================================
+     TOP NAV
+     ============================================ -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-gray-800/50">
+  <div class="flex items-center justify-between px-6 py-3">
+    <div class="flex items-center gap-4">
+      <button id="sidebar-toggle" class="lg:hidden text-gray-400 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="assets/cmc-resized.png" alt="CMC Logo" class="h-7">
+        <span class="text-white font-bold text-sm">CMC Design System</span>
+        <span class="text-gray-500 text-xs ml-2">v1.0</span>
+      </a>
+    </div>
+
+    <!-- Search -->
+    <div class="relative max-w-md flex-1 mx-8 hidden md:block">
+      <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <input
+        type="search"
+        id="docs-search"
+        placeholder="Search components, tokens... (Cmd+K)"
+        class="w-full bg-gray-900 border border-gray-800 rounded-lg pl-10 pr-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gray-700"
+      />
+      <div id="search-results" class="search-results"></div>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <a href="tokens/tokens.json" class="text-gray-400 text-xs hover:text-white transition-colors hidden sm:inline">Tokens JSON</a>
+      <a href="brand-guidelines/index.html" class="text-gray-400 text-xs hover:text-white transition-colors hidden sm:inline">Brand Guide</a>
+    </div>
+  </div>
+</header>
+
+<div class="flex pt-14">
+
+  <!-- ============================================
+       SIDEBAR
+       ============================================ -->
+  <aside class="docs-sidebar w-64 fixed left-0 top-14 bottom-0 overflow-y-auto border-r border-gray-800/50 bg-black p-4 flex-shrink-0">
+    <button id="sidebar-close" class="lg:hidden absolute top-4 right-4 text-gray-400 hover:text-white">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+
+    <nav class="space-y-6">
+      <!-- Getting Started -->
+      <div>
+        <p class="text-gray-500 text-xs uppercase tracking-wider font-semibold mb-2 px-1">Getting Started</p>
+        <a href="#overview" class="sidebar-link active">Overview</a>
+        <a href="#installation" class="sidebar-link">Installation</a>
+      </div>
+
+      <!-- Design Tokens -->
+      <div>
+        <p class="text-gray-500 text-xs uppercase tracking-wider font-semibold mb-2 px-1">Design Tokens</p>
+        <a href="#colors" class="sidebar-link">Colors</a>
+        <a href="#typography" class="sidebar-link">Typography</a>
+        <a href="#spacing" class="sidebar-link">Spacing</a>
+        <a href="#shadows" class="sidebar-link">Shadows</a>
+      </div>
+
+      <!-- Components -->
+      <div>
+        <p class="text-gray-500 text-xs uppercase tracking-wider font-semibold mb-2 px-1">Components</p>
+        <a href="#navbar" class="sidebar-link">Navbar</a>
+        <a href="#heroes" class="sidebar-link">Hero Sections</a>
+        <a href="#buttons" class="sidebar-link">Buttons</a>
+        <a href="#cards" class="sidebar-link">Cards</a>
+        <a href="#forms" class="sidebar-link">Forms</a>
+        <a href="#testimonials" class="sidebar-link">Testimonials</a>
+        <a href="#stats" class="sidebar-link">Stats</a>
+        <a href="#footer" class="sidebar-link">Footer</a>
+      </div>
+
+      <!-- Patterns -->
+      <div>
+        <p class="text-gray-500 text-xs uppercase tracking-wider font-semibold mb-2 px-1">Patterns</p>
+        <a href="#partner-logos" class="sidebar-link">Partner Logos</a>
+        <a href="#teal-banner" class="sidebar-link">Teal Banner</a>
+        <a href="#photo-grid" class="sidebar-link">Photo Grid</a>
+        <a href="#process-steps" class="sidebar-link">Process Steps</a>
+        <a href="#social-links" class="sidebar-link">Social Links</a>
+      </div>
+
+      <!-- Layout -->
+      <div>
+        <p class="text-gray-500 text-xs uppercase tracking-wider font-semibold mb-2 px-1">Layout</p>
+        <a href="#containers" class="sidebar-link">Containers</a>
+        <a href="#dividers" class="sidebar-link">Dividers</a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ============================================
+       MAIN CONTENT
+       ============================================ -->
+  <main class="flex-1 lg:ml-64 px-6 md:px-12 py-12 max-w-5xl">
+
+    <!-- OVERVIEW -->
+    <section id="overview" data-search-title="Overview" data-search-category="Getting Started">
+      <h1 class="text-4xl font-bold mb-4">CMC Group Design System</h1>
+      <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-3xl">
+        A comprehensive collection of design tokens, components, and patterns extracted from the CMC Group website mockups. Built with HTML + Tailwind CSS for rapid, copy-paste development.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+          <div class="text-3xl font-black text-cmc-primary-light mb-2">35+</div>
+          <p class="text-gray-400 text-sm">Component Variants</p>
+        </div>
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+          <div class="text-3xl font-black text-cmc-primary-light mb-2">50+</div>
+          <p class="text-gray-400 text-sm">Design Tokens</p>
+        </div>
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+          <div class="text-3xl font-black text-cmc-primary-light mb-2">5</div>
+          <p class="text-gray-400 text-sm">Page Templates</p>
+        </div>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-800 rounded-xl p-6 mb-6">
+        <h3 class="text-white font-semibold mb-3">Pages Covered</h3>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+            <p class="text-white text-sm font-medium">Home</p>
+          </div>
+          <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+            <p class="text-white text-sm font-medium">About Us</p>
+          </div>
+          <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+            <p class="text-white text-sm font-medium">What We Do</p>
+          </div>
+          <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+            <p class="text-white text-sm font-medium">Our Team</p>
+          </div>
+          <div class="text-center p-3 bg-gray-800/50 rounded-lg">
+            <p class="text-white text-sm font-medium">Contact Us</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTALLATION -->
+    <section id="installation" class="mt-20" data-search-title="Installation & Setup" data-search-category="Getting Started">
+      <h2 class="text-2xl font-bold mb-4">Installation & Setup</h2>
+      <p class="text-gray-400 mb-6">Add Tailwind CSS and the Inter font to your project, then copy-paste any component.</p>
+
+      <div class="code-block mb-6">
+        <button class="copy-btn">Copy</button>
+        <pre><code>&lt;!-- Add to your HTML &lt;head&gt; --&gt;
+&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"&gt;
+
+&lt;!-- Optional: Include CMC tokens as CSS variables --&gt;
+&lt;link rel="stylesheet" href="tokens/tokens.css"&gt;</code></pre>
+      </div>
+
+      <div class="code-block">
+        <button class="copy-btn">Copy</button>
+        <pre><code>// Tailwind config extension
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Inter', 'sans-serif'] },
+      colors: {
+        'cmc-primary': '#0891B2',
+        'cmc-primary-light': '#22D3EE',
+        'cmc-primary-dark': '#0E7490',
+        'cmc-secondary': '#DC2626',
+      }
+    }
+  }
+}</code></pre>
+      </div>
+    </section>
+
+    <!-- COLORS -->
+    <section id="colors" class="mt-20" data-search-title="Colors" data-search-category="Design Tokens">
+      <h2 class="text-2xl font-bold mb-2">Colors</h2>
+      <p class="text-gray-400 mb-8">The CMC color palette is dark-first, using deep blacks and grays with teal and red accents.</p>
+
+      <h3 class="text-lg font-semibold mb-4">Brand Colors</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <div>
+          <div class="color-swatch" style="background: #0891B2;"></div>
+          <p class="text-white text-sm font-medium mt-2">Primary</p>
+          <p class="text-gray-500 text-xs font-mono">#0891B2</p>
+        </div>
+        <div>
+          <div class="color-swatch" style="background: #22D3EE;"></div>
+          <p class="text-white text-sm font-medium mt-2">Primary Light</p>
+          <p class="text-gray-500 text-xs font-mono">#22D3EE</p>
+        </div>
+        <div>
+          <div class="color-swatch" style="background: #DC2626;"></div>
+          <p class="text-white text-sm font-medium mt-2">Secondary (Red)</p>
+          <p class="text-gray-500 text-xs font-mono">#DC2626</p>
+        </div>
+        <div>
+          <div class="color-swatch" style="background: #2563EB;"></div>
+          <p class="text-white text-sm font-medium mt-2">Tertiary (Blue)</p>
+          <p class="text-gray-500 text-xs font-mono">#2563EB</p>
+        </div>
+      </div>
+
+      <h3 class="text-lg font-semibold mb-4">Background Colors</h3>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-10">
+        <div>
+          <div class="color-swatch" style="background: #000000;"></div>
+          <p class="text-white text-sm font-medium mt-2">Base</p>
+          <p class="text-gray-500 text-xs font-mono">#000000</p>
+        </div>
+        <div>
+          <div class="color-swatch" style="background: #0A0A0A;"></div>
+          <p class="text-white text-sm font-medium mt-2">Elevated</p>
+          <p class="text-gray-500 text-xs font-mono">#0A0A0A</p>
+        </div>
+        <div>
+          <div class="color-swatch" style="background: #111111;"></div>
+          <p class="text-white text-sm font-medium mt-2">Surface</p>
+          <p class="text-gray-500 text-xs font-mono">#111111</p>
+        </div>
+        <div>
+          <div class="color-swatch" style="background: #111827;"></div>
+          <p class="text-white text-sm font-medium mt-2">Card</p>
+          <p class="text-gray-500 text-xs font-mono">#111827</p>
+        </div>
+        <div>
+          <div class="color-swatch" style="background: #1F2937;"></div>
+          <p class="text-white text-sm font-medium mt-2">Card Hover</p>
+          <p class="text-gray-500 text-xs font-mono">#1F2937</p>
+        </div>
+      </div>
+
+      <h3 class="text-lg font-semibold mb-4">Text Colors</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <div>
+          <div class="color-swatch flex items-center justify-center" style="background: #000; border-color: #333;"><span style="color: #FFFFFF;" class="text-sm font-medium">Aa</span></div>
+          <p class="text-white text-sm font-medium mt-2">Primary</p>
+          <p class="text-gray-500 text-xs font-mono">#FFFFFF</p>
+        </div>
+        <div>
+          <div class="color-swatch flex items-center justify-center" style="background: #000; border-color: #333;"><span style="color: #D1D5DB;" class="text-sm font-medium">Aa</span></div>
+          <p class="text-white text-sm font-medium mt-2">Secondary</p>
+          <p class="text-gray-500 text-xs font-mono">#D1D5DB</p>
+        </div>
+        <div>
+          <div class="color-swatch flex items-center justify-center" style="background: #000; border-color: #333;"><span style="color: #9CA3AF;" class="text-sm font-medium">Aa</span></div>
+          <p class="text-white text-sm font-medium mt-2">Muted</p>
+          <p class="text-gray-500 text-xs font-mono">#9CA3AF</p>
+        </div>
+        <div>
+          <div class="color-swatch flex items-center justify-center" style="background: #000; border-color: #333;"><span style="color: #22D3EE;" class="text-sm font-medium">Aa</span></div>
+          <p class="text-white text-sm font-medium mt-2">Accent</p>
+          <p class="text-gray-500 text-xs font-mono">#22D3EE</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section id="typography" class="mt-20" data-search-title="Typography" data-search-category="Design Tokens">
+      <h2 class="text-2xl font-bold mb-2">Typography</h2>
+      <p class="text-gray-400 mb-8">Inter is the primary typeface. Headlines use extrabold/black weights; body uses regular/medium.</p>
+
+      <div class="space-y-8 mb-12">
+        <div class="flex items-baseline gap-6 pb-4 border-b border-gray-800">
+          <span class="text-gray-500 text-xs font-mono w-24 flex-shrink-0">8xl / 96px</span>
+          <span class="text-6xl font-black text-white leading-none">Display</span>
+        </div>
+        <div class="flex items-baseline gap-6 pb-4 border-b border-gray-800">
+          <span class="text-gray-500 text-xs font-mono w-24 flex-shrink-0">5xl / 48px</span>
+          <span class="text-5xl font-bold text-white">Hero Heading</span>
+        </div>
+        <div class="flex items-baseline gap-6 pb-4 border-b border-gray-800">
+          <span class="text-gray-500 text-xs font-mono w-24 flex-shrink-0">4xl / 36px</span>
+          <span class="text-4xl font-bold text-white">Section Heading</span>
+        </div>
+        <div class="flex items-baseline gap-6 pb-4 border-b border-gray-800">
+          <span class="text-gray-500 text-xs font-mono w-24 flex-shrink-0">2xl / 24px</span>
+          <span class="text-2xl font-bold text-white">Subsection</span>
+        </div>
+        <div class="flex items-baseline gap-6 pb-4 border-b border-gray-800">
+          <span class="text-gray-500 text-xs font-mono w-24 flex-shrink-0">lg / 18px</span>
+          <span class="text-lg text-white">Large Body Text</span>
+        </div>
+        <div class="flex items-baseline gap-6 pb-4 border-b border-gray-800">
+          <span class="text-gray-500 text-xs font-mono w-24 flex-shrink-0">base / 16px</span>
+          <span class="text-base text-gray-300">Regular body text for paragraphs and descriptions.</span>
+        </div>
+        <div class="flex items-baseline gap-6 pb-4 border-b border-gray-800">
+          <span class="text-gray-500 text-xs font-mono w-24 flex-shrink-0">sm / 14px</span>
+          <span class="text-sm text-gray-400">Small text for cards, navigation, and secondary content.</span>
+        </div>
+        <div class="flex items-baseline gap-6">
+          <span class="text-gray-500 text-xs font-mono w-24 flex-shrink-0">xs / 12px</span>
+          <span class="text-xs text-gray-500">Caption text for labels, meta info, and fine print.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPACING -->
+    <section id="spacing" class="mt-20" data-search-title="Spacing Scale" data-search-category="Design Tokens">
+      <h2 class="text-2xl font-bold mb-2">Spacing</h2>
+      <p class="text-gray-400 mb-8">A consistent 4px-based spacing scale used throughout the design system.</p>
+
+      <div class="space-y-3">
+        <div class="flex items-center gap-4"><div class="bg-cmc-primary/30 h-4 rounded" style="width: 16px;"></div><span class="text-gray-400 text-xs font-mono">4 - 16px</span></div>
+        <div class="flex items-center gap-4"><div class="bg-cmc-primary/30 h-4 rounded" style="width: 24px;"></div><span class="text-gray-400 text-xs font-mono">6 - 24px</span></div>
+        <div class="flex items-center gap-4"><div class="bg-cmc-primary/30 h-4 rounded" style="width: 32px;"></div><span class="text-gray-400 text-xs font-mono">8 - 32px</span></div>
+        <div class="flex items-center gap-4"><div class="bg-cmc-primary/30 h-4 rounded" style="width: 48px;"></div><span class="text-gray-400 text-xs font-mono">12 - 48px</span></div>
+        <div class="flex items-center gap-4"><div class="bg-cmc-primary/30 h-4 rounded" style="width: 64px;"></div><span class="text-gray-400 text-xs font-mono">16 - 64px</span></div>
+        <div class="flex items-center gap-4"><div class="bg-cmc-primary/30 h-4 rounded" style="width: 80px;"></div><span class="text-gray-400 text-xs font-mono">20 - 80px</span></div>
+        <div class="flex items-center gap-4"><div class="bg-cmc-primary/30 h-4 rounded" style="width: 96px;"></div><span class="text-gray-400 text-xs font-mono">24 - 96px</span></div>
+      </div>
+    </section>
+
+    <!-- SHADOWS -->
+    <section id="shadows" class="mt-20" data-search-title="Shadows & Effects" data-search-category="Design Tokens">
+      <h2 class="text-2xl font-bold mb-2">Shadows & Effects</h2>
+      <p class="text-gray-400 mb-8">Shadow tokens include standard elevations and teal glow effects.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-900 rounded-xl p-8 text-center" style="box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+          <p class="text-white text-sm font-medium">Card Shadow</p>
+          <p class="text-gray-500 text-xs font-mono mt-1">shadow-card</p>
+        </div>
+        <div class="bg-gray-900 rounded-xl p-8 text-center" style="box-shadow: 0 0 20px rgba(8,145,178,0.3);">
+          <p class="text-white text-sm font-medium">Teal Glow</p>
+          <p class="text-gray-500 text-xs font-mono mt-1">shadow-glow-teal</p>
+        </div>
+        <div class="bg-gray-900 rounded-xl p-8 text-center" style="box-shadow: 0 0 40px rgba(8,145,178,0.2);">
+          <p class="text-white text-sm font-medium">Teal Glow Large</p>
+          <p class="text-gray-500 text-xs font-mono mt-1">shadow-glow-teal-lg</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVBAR -->
+    <section id="navbar" class="mt-20" data-search-title="Navbar / Navigation" data-search-category="Components">
+      <h2 class="text-2xl font-bold mb-2">Navbar</h2>
+      <p class="text-gray-400 mb-6">Fixed navigation bar with logo, links, and CTA. Transitions from transparent to solid on scroll.</p>
+
+      <div class="component-example">
+        <div class="component-preview mb-4">
+          <div class="component-preview-header">
+            <span class="text-gray-400 text-xs">Preview</span>
+            <button class="toggle-code text-xs text-gray-500 hover:text-white">Show Code</button>
+          </div>
+          <div class="component-preview-body">
+            <nav class="bg-black/90 backdrop-blur-md border border-gray-800 rounded-xl px-6 py-3 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <img src="../../assets/cmc-resized.png" alt="CMC Logo" class="h-7">
+                <span class="text-white font-semibold text-sm">CMC</span>
+              </div>
+              <div class="flex items-center gap-6">
+                <a href="#" class="text-gray-300 text-sm hover:text-white transition-colors">What We Do</a>
+                <a href="#" class="text-gray-300 text-sm hover:text-white transition-colors">About</a>
+                <a href="#" class="text-gray-300 text-sm hover:text-white transition-colors">Blog</a>
+                <a href="#" class="text-gray-300 text-sm hover:text-white transition-colors">Our Team</a>
+              </div>
+              <a href="#" class="inline-flex items-center gap-2 bg-white text-black text-xs font-semibold px-4 py-2 rounded-full">
+                Contact Us
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </nav>
+          </div>
+        </div>
+        <div class="code-block" style="display:none;">
+          <button class="copy-btn">Copy</button>
+          <pre><code>&lt;nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-gray-800/50"&gt;
+  &lt;div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"&gt;
+    &lt;a href="/" class="flex items-center gap-2"&gt;
+      &lt;div class="w-8 h-8 rounded-full bg-gradient-to-br from-red-600 to-blue-600"&gt;&lt;/div&gt;
+      &lt;span class="text-white font-semibold text-sm"&gt;CMC&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class="flex items-center gap-8"&gt;
+      &lt;a href="#" class="text-gray-300 text-sm font-medium hover:text-white"&gt;What We Do&lt;/a&gt;
+      &lt;a href="#" class="text-gray-300 text-sm font-medium hover:text-white"&gt;About The Firm&lt;/a&gt;
+      &lt;a href="#" class="text-gray-300 text-sm font-medium hover:text-white"&gt;Blog&lt;/a&gt;
+      &lt;a href="#" class="text-gray-300 text-sm font-medium hover:text-white"&gt;Our Team&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;a href="#" class="inline-flex items-center gap-2 bg-white text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-gray-100"&gt;
+      Contact Us
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+      </div>
+
+      <div class="bg-gray-900/50 border border-gray-800 rounded-lg p-4 mt-4">
+        <p class="text-gray-400 text-sm"><strong class="text-white">Usage:</strong> Present on all pages. Logo left, nav links center, CTA right. On mobile, collapses to hamburger menu. See <code class="text-cyan-400">components/navigation/navbar.html</code> for full implementation with all variants.</p>
+      </div>
+    </section>
+
+    <!-- HEROES -->
+    <section id="heroes" class="mt-20" data-search-title="Hero Sections" data-search-category="Components">
+      <h2 class="text-2xl font-bold mb-2">Hero Sections</h2>
+      <p class="text-gray-400 mb-6">Full-width hero components with background images, dark overlays, and bold typography.</p>
+
+      <div class="component-preview mb-4">
+        <div class="component-preview-header">
+          <span class="text-gray-400 text-xs">Home Page Hero</span>
+        </div>
+        <div class="component-preview-body relative overflow-hidden h-64 bg-gray-900 rounded-b-xl flex items-center">
+          <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80"></div>
+          <div class="relative z-10 px-8">
+            <h1 class="text-3xl font-extrabold text-white leading-tight tracking-tight uppercase">
+              WE HELP BUSINESSES<br>SCALE WITH INDUSTRY<br>LEADING SOLUTIONS.
+            </h1>
+            <div class="mt-6">
+              <a href="#" class="inline-flex items-center gap-2 bg-white text-black text-xs font-semibold px-4 py-2 rounded-full">
+                Request a Quote
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-400 text-sm mt-4">4 hero variants available: Home (with CTA), About (dark gradient), What We Do (with image + dot accents), Contact (minimal). See <code class="text-cyan-400">components/heroes/</code></p>
+    </section>
+
+    <!-- BUTTONS -->
+    <section id="buttons" class="mt-20" data-search-title="Buttons" data-search-category="Components">
+      <h2 class="text-2xl font-bold mb-2">Buttons</h2>
+      <p class="text-gray-400 mb-6">Button styles range from primary pill CTAs to ghost text links.</p>
+
+      <div class="component-preview mb-4">
+        <div class="component-preview-header">
+          <span class="text-gray-400 text-xs">All Button Variants</span>
+        </div>
+        <div class="component-preview-body space-y-6">
+          <!-- Primary -->
+          <div>
+            <p class="text-gray-500 text-xs uppercase tracking-wider mb-3">Primary (Pill)</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#" class="inline-flex items-center gap-2 bg-white text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-gray-100 transition-all">
+                Contact Us
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+              <a href="#" class="inline-flex items-center gap-2 bg-white text-black text-xs font-semibold px-4 py-2 rounded-full">Small</a>
+            </div>
+          </div>
+          <!-- Secondary -->
+          <div>
+            <p class="text-gray-500 text-xs uppercase tracking-wider mb-3">Secondary (Teal)</p>
+            <a href="#" class="inline-flex items-center gap-2 bg-cyan-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-cyan-700 transition-all">Get Started</a>
+          </div>
+          <!-- Outline -->
+          <div>
+            <p class="text-gray-500 text-xs uppercase tracking-wider mb-3">Outline</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#" class="inline-flex items-center gap-2 border border-white/30 text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-white/5 transition-all">Learn More</a>
+              <a href="#" class="inline-flex items-center gap-2 border border-cyan-600 text-cyan-400 text-sm font-medium px-5 py-2.5 rounded-full hover:bg-cyan-600/10 transition-all">View Details</a>
+            </div>
+          </div>
+          <!-- Ghost -->
+          <div>
+            <p class="text-gray-500 text-xs uppercase tracking-wider mb-3">Ghost / Text</p>
+            <a href="#" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:text-cyan-300 transition-colors">
+              Read More
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+          <!-- Form Submit -->
+          <div>
+            <p class="text-gray-500 text-xs uppercase tracking-wider mb-3">Form Submit</p>
+            <button class="inline-flex items-center gap-2 border border-white text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all">Send Message</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-400 text-sm">See <code class="text-cyan-400">components/buttons/buttons.html</code> for all 7+ button variants with hover states.</p>
+    </section>
+
+    <!-- CARDS -->
+    <section id="cards" class="mt-20" data-search-title="Cards" data-search-category="Components">
+      <h2 class="text-2xl font-bold mb-2">Cards</h2>
+      <p class="text-gray-400 mb-6">Card components for services, blog posts, team members, stats, and general content.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <!-- Service Card -->
+        <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
+          <div class="h-1 bg-gradient-to-r from-cyan-600 to-cyan-400"></div>
+          <div class="p-5">
+            <div class="w-8 h-8 bg-cyan-600/10 rounded-lg flex items-center justify-center mb-3">
+              <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            </div>
+            <h3 class="text-white font-bold text-sm mb-1">Service Card (Dark)</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">Teal gradient top border with icon, title, and description.</p>
+          </div>
+        </div>
+
+        <!-- Blog Card -->
+        <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
+          <div class="h-32 bg-gray-800"></div>
+          <div class="p-5">
+            <h3 class="text-white font-semibold text-sm mb-1">Blog Card</h3>
+            <p class="text-gray-400 text-xs leading-relaxed mb-2">Image top with title, excerpt, and read more link.</p>
+            <span class="text-cyan-400 text-xs">Read More</span>
+          </div>
+        </div>
+
+        <!-- Team Card -->
+        <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
+          <div class="h-32 bg-gray-800"></div>
+          <div class="p-5">
+            <h3 class="text-white font-bold text-sm">Team Member Card</h3>
+            <p class="text-cyan-400 text-xs mt-0.5">Role Title</p>
+            <p class="text-gray-400 text-xs mt-2 leading-relaxed">Full card with photo, name, role, and bio.</p>
+          </div>
+        </div>
+
+        <!-- Stat Card -->
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-5 text-center">
+          <div class="text-3xl font-black text-cyan-400 mb-1">500+</div>
+          <p class="text-gray-400 text-xs">Stat Card</p>
+        </div>
+      </div>
+
+      <p class="text-gray-400 text-sm">See <code class="text-cyan-400">components/cards/</code> for service-card.html, blog-card.html, team-card.html, stat-card.html, and info-card.html.</p>
+    </section>
+
+    <!-- FORMS -->
+    <section id="forms" class="mt-20" data-search-title="Forms & Inputs" data-search-category="Components">
+      <h2 class="text-2xl font-bold mb-2">Forms</h2>
+      <p class="text-gray-400 mb-6">Form elements with dark theme styling. Used on the Contact Us page.</p>
+
+      <div class="component-preview mb-4">
+        <div class="component-preview-header">
+          <span class="text-gray-400 text-xs">Form Elements</span>
+        </div>
+        <div class="component-preview-body max-w-md space-y-4">
+          <div>
+            <label class="block text-white text-sm font-medium mb-2">Full name</label>
+            <input type="text" placeholder="Enter Your name" class="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-600">
+          </div>
+          <div>
+            <label class="block text-white text-sm font-medium mb-2">Message</label>
+            <textarea rows="3" placeholder="Type here" class="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-600 resize-none"></textarea>
+          </div>
+          <button class="inline-flex items-center gap-2 border border-white text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all">Send Message</button>
+        </div>
+      </div>
+
+      <p class="text-gray-400 text-sm">See <code class="text-cyan-400">components/forms/</code> for contact-form.html and form-elements.html with all states (default, focus, error, disabled).</p>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="mt-20" data-search-title="Testimonials" data-search-category="Components">
+      <h2 class="text-2xl font-bold mb-2">Testimonials</h2>
+      <p class="text-gray-400 mb-6">Client quotes and feedback displays with star ratings, avatars, and attribution.</p>
+
+      <div class="component-preview mb-4">
+        <div class="component-preview-header">
+          <span class="text-gray-400 text-xs">Testimonial Card</span>
+        </div>
+        <div class="component-preview-body">
+          <div class="bg-gray-900 border border-gray-800 rounded-xl p-5 max-w-sm">
+            <div class="flex gap-1 mb-3">
+              <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">"CMC Group transformed our customer acquisition strategy. Exceptional results."</p>
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-gray-700"></div>
+              <div>
+                <p class="text-white font-medium text-xs">Robert Martinez</p>
+                <p class="text-gray-500 text-[10px]">Regional VP, TechBrand</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-400 text-sm">3 variants: Quote with image, Star rating card grid, Large featured quote. See <code class="text-cyan-400">components/testimonials/testimonials.html</code></p>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats" class="mt-20" data-search-title="Statistics & Metrics" data-search-category="Components">
+      <h2 class="text-2xl font-bold mb-2">Statistics</h2>
+      <p class="text-gray-400 mb-6">Large numerical stat displays for achievements and growth metrics.</p>
+
+      <div class="component-preview mb-4">
+        <div class="component-preview-header"><span class="text-gray-400 text-xs">Stats Row</span></div>
+        <div class="component-preview-body">
+          <div class="grid grid-cols-4 gap-6">
+            <div><div class="text-3xl font-black text-white">500+</div><p class="text-gray-400 text-xs mt-1">Team Members</p></div>
+            <div><div class="text-3xl font-black text-white">50+</div><p class="text-gray-400 text-xs mt-1">Cities</p></div>
+            <div><div class="text-3xl font-black text-white">98%</div><p class="text-gray-400 text-xs mt-1">Retention</p></div>
+            <div><div class="text-3xl font-black text-white">10+</div><p class="text-gray-400 text-xs mt-1">Years</p></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-400 text-sm">4 variants: Simple row, Teal accent border, Card grid, Large centered. See <code class="text-cyan-400">components/cards/stat-card.html</code></p>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer" class="mt-20" data-search-title="Footer" data-search-category="Components">
+      <h2 class="text-2xl font-bold mb-2">Footer</h2>
+      <p class="text-gray-400 mb-6">Site footer with logo, social links, navigation, and legal text.</p>
+      <p class="text-gray-400 text-sm">2 variants: Full footer with social + nav columns, Minimal inline footer. See <code class="text-cyan-400">components/footers/footer.html</code></p>
+    </section>
+
+    <!-- PARTNER LOGOS -->
+    <section id="partner-logos" class="mt-20" data-search-title="Partner Logos" data-search-category="Patterns">
+      <h2 class="text-2xl font-bold mb-2">Partner Logos</h2>
+      <p class="text-gray-400 mb-6">Trusted partner logo rows with optional scrolling animation.</p>
+      <p class="text-gray-400 text-sm">See <code class="text-cyan-400">components/sections/partner-logos.html</code></p>
+    </section>
+
+    <!-- TEAL BANNER -->
+    <section id="teal-banner" class="mt-20" data-search-title="Teal Banner / CTA" data-search-category="Patterns">
+      <h2 class="text-2xl font-bold mb-2">Teal Banner</h2>
+      <p class="text-gray-400 mb-6">Full-width teal call-to-action banners used for awards, mission, and footer CTAs.</p>
+
+      <div class="component-preview mb-4">
+        <div class="component-preview-header"><span class="text-gray-400 text-xs">Award Banner</span></div>
+        <div class="bg-gradient-to-r from-cyan-700 via-cyan-600 to-cyan-700 py-8 px-6 rounded-b-xl text-center">
+          <h3 class="text-xl font-bold text-white uppercase">PROUD TO BE AN AWARD WINNING SOLUTIONS PROVIDER</h3>
+          <p class="text-cyan-100/70 text-xs mt-2 max-w-xl mx-auto">CMC Group has been recognized for outstanding performance in growth, leadership, and client relationships.</p>
+        </div>
+      </div>
+
+      <p class="text-gray-400 text-sm">4 variants available. See <code class="text-cyan-400">components/sections/teal-banner.html</code></p>
+    </section>
+
+    <!-- PHOTO GRID -->
+    <section id="photo-grid" class="mt-20" data-search-title="Photo Grid / Gallery" data-search-category="Patterns">
+      <h2 class="text-2xl font-bold mb-2">Photo Grid</h2>
+      <p class="text-gray-400 mb-6">Image gallery layouts for team photos and action shots.</p>
+      <p class="text-gray-400 text-sm">3 variants: Multi-size grid, Captioned two-column, Full-width banner. See <code class="text-cyan-400">components/media/photo-grid.html</code></p>
+    </section>
+
+    <!-- PROCESS STEPS -->
+    <section id="process-steps" class="mt-20" data-search-title="Process Steps / Blueprint" data-search-category="Patterns">
+      <h2 class="text-2xl font-bold mb-2">Process Steps</h2>
+      <p class="text-gray-400 mb-6">Multi-step process layouts for blueprints, career paths, and methodologies.</p>
+      <p class="text-gray-400 text-sm">3 variants: Horizontal steps, Numbered cards, Vertical timeline. See <code class="text-cyan-400">components/sections/blueprint-process.html</code></p>
+    </section>
+
+    <!-- SOCIAL LINKS -->
+    <section id="social-links" class="mt-20" data-search-title="Social Media Links" data-search-category="Patterns">
+      <h2 class="text-2xl font-bold mb-2">Social Links</h2>
+      <p class="text-gray-400 mb-6">Social media icon patterns for footer and profile sections.</p>
+      <p class="text-gray-400 text-sm">Circle icons (40px) and small inline icons (32px). Includes Facebook, Instagram, YouTube, LinkedIn. See <code class="text-cyan-400">components/sections/social-links.html</code></p>
+    </section>
+
+    <!-- CONTAINERS -->
+    <section id="containers" class="mt-20" data-search-title="Container & Layout" data-search-category="Layout">
+      <h2 class="text-2xl font-bold mb-2">Containers & Layout</h2>
+      <p class="text-gray-400 mb-6">Page structure patterns and grid systems.</p>
+      <p class="text-gray-400 text-sm">Includes: max-w-7xl container, narrow container, 2/3/4-column grids, form+sidebar layout, full-width sections. See <code class="text-cyan-400">components/layout/containers.html</code></p>
+    </section>
+
+    <!-- DIVIDERS -->
+    <section id="dividers" class="mt-20 mb-20" data-search-title="Dividers & Decorative Elements" data-search-category="Layout">
+      <h2 class="text-2xl font-bold mb-2">Dividers & Decorations</h2>
+      <p class="text-gray-400 mb-6">Visual separators and decorative accents.</p>
+      <p class="text-gray-400 text-sm">Includes: Line dividers, teal accent lines, dot grid patterns, card top border gradients, pagination dots. See <code class="text-cyan-400">components/layout/section-dividers.html</code></p>
+    </section>
+
+    <!-- FILE MANIFEST -->
+    <section id="file-manifest" class="mt-20 mb-20 border-t border-gray-800 pt-12" data-search-title="Component File Manifest" data-search-category="Reference">
+      <h2 class="text-2xl font-bold mb-6">Component File Manifest</h2>
+      <table class="token-table">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>File</th>
+            <th>Variants</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Navbar</td><td class="font-mono text-xs text-cyan-400">components/navigation/navbar.html</td><td>3</td></tr>
+          <tr><td>Hero - Home</td><td class="font-mono text-xs text-cyan-400">components/heroes/hero-home.html</td><td>1</td></tr>
+          <tr><td>Hero - Page</td><td class="font-mono text-xs text-cyan-400">components/heroes/hero-page.html</td><td>4</td></tr>
+          <tr><td>Buttons</td><td class="font-mono text-xs text-cyan-400">components/buttons/buttons.html</td><td>7</td></tr>
+          <tr><td>Service Cards</td><td class="font-mono text-xs text-cyan-400">components/cards/service-card.html</td><td>2</td></tr>
+          <tr><td>Blog Cards</td><td class="font-mono text-xs text-cyan-400">components/cards/blog-card.html</td><td>2</td></tr>
+          <tr><td>Team Cards</td><td class="font-mono text-xs text-cyan-400">components/cards/team-card.html</td><td>2</td></tr>
+          <tr><td>Stat Cards</td><td class="font-mono text-xs text-cyan-400">components/cards/stat-card.html</td><td>4</td></tr>
+          <tr><td>Info Cards</td><td class="font-mono text-xs text-cyan-400">components/cards/info-card.html</td><td>5</td></tr>
+          <tr><td>Contact Form</td><td class="font-mono text-xs text-cyan-400">components/forms/contact-form.html</td><td>2</td></tr>
+          <tr><td>Form Elements</td><td class="font-mono text-xs text-cyan-400">components/forms/form-elements.html</td><td>7</td></tr>
+          <tr><td>Testimonials</td><td class="font-mono text-xs text-cyan-400">components/testimonials/testimonials.html</td><td>3</td></tr>
+          <tr><td>Footer</td><td class="font-mono text-xs text-cyan-400">components/footers/footer.html</td><td>2</td></tr>
+          <tr><td>Typography</td><td class="font-mono text-xs text-cyan-400">components/typography/typography.html</td><td>Full scale</td></tr>
+          <tr><td>Partner Logos</td><td class="font-mono text-xs text-cyan-400">components/sections/partner-logos.html</td><td>2</td></tr>
+          <tr><td>Teal Banner</td><td class="font-mono text-xs text-cyan-400">components/sections/teal-banner.html</td><td>4</td></tr>
+          <tr><td>Company Intro</td><td class="font-mono text-xs text-cyan-400">components/sections/company-intro.html</td><td>3</td></tr>
+          <tr><td>Mission Section</td><td class="font-mono text-xs text-cyan-400">components/sections/mission-section.html</td><td>4</td></tr>
+          <tr><td>Process Steps</td><td class="font-mono text-xs text-cyan-400">components/sections/blueprint-process.html</td><td>3</td></tr>
+          <tr><td>Photo Grid</td><td class="font-mono text-xs text-cyan-400">components/media/photo-grid.html</td><td>3</td></tr>
+          <tr><td>Social Links</td><td class="font-mono text-xs text-cyan-400">components/sections/social-links.html</td><td>2</td></tr>
+          <tr><td>Badges</td><td class="font-mono text-xs text-cyan-400">components/badges/badges.html</td><td>5</td></tr>
+          <tr><td>Feature Lists</td><td class="font-mono text-xs text-cyan-400">components/lists/feature-list.html</td><td>4</td></tr>
+          <tr><td>Section Dividers</td><td class="font-mono text-xs text-cyan-400">components/layout/section-dividers.html</td><td>6</td></tr>
+          <tr><td>Containers</td><td class="font-mono text-xs text-cyan-400">components/layout/containers.html</td><td>6</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<script src="assets/js/docs.js"></script>
+</body>
+</html>

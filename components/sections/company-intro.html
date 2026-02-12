@@ -1,0 +1,125 @@
+<!--
+  CMC Design System - Company Introduction Section
+
+  Description: Two-column layout with text content and image, introducing the company.
+  Used on: HomePage (Our Company), AboutUs (Introducing CMC Group), WhatWeDo (Who We Are)
+  Variants: Image right, Image left, With button, With stats
+
+  Dependencies: Tailwind CSS CDN
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Intro Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="bg-black font-sans">
+
+<div class="max-w-7xl mx-auto space-y-24 py-20 px-6">
+
+  <!-- ============================================
+       VARIANT 1: Text Left, Image Right (Our Company - HomePage)
+       ============================================ -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 uppercase">OUR COMPANY</h2>
+      <p class="text-gray-400 leading-relaxed mb-4">
+        CMC Group is a nationwide customer acquisition firm specializing with leading telecom and technology brands. Our team of professionals thrives on building authentic connections with customers, creating a culture of leadership, fun attitude, teamwork, high quality results, built on professionalism and accountability.
+      </p>
+      <p class="text-gray-400 leading-relaxed mb-8">
+        We take pride in developing the next generation of business leaders through hands-on training, mentorship, and real-world experience.
+      </p>
+      <a href="#" class="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium hover:gap-3 transition-all group">
+        Learn More About Us
+        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+    <div class="rounded-2xl overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800"
+        alt="CMC Group team"
+        class="w-full h-80 lg:h-96 object-cover"
+      />
+    </div>
+  </section>
+
+  <!-- ============================================
+       VARIANT 2: Image Left, Text Right (AboutUs - Introducing)
+       ============================================ -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <div class="rounded-2xl overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800"
+        alt="Team collaboration"
+        class="w-full h-80 lg:h-96 object-cover"
+      />
+    </div>
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 uppercase">INTRODUCING CMC GROUP</h2>
+      <p class="text-gray-400 leading-relaxed mb-4">
+        CMC Group is a nationally recognized customer acquisition firm that partners with leading brands across telecommunications and technology sectors.
+      </p>
+      <p class="text-gray-400 leading-relaxed mb-4">
+        Our approach combines proven sales methodologies with a deep commitment to developing tomorrow's business leaders.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <a href="#" class="inline-flex items-center gap-2 bg-white text-black text-sm font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition-all">
+          Our Services
+        </a>
+        <a href="#" class="inline-flex items-center gap-2 border border-white/30 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-white/5 transition-all">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VARIANT 3: Who We Are (WhatWeDo page - with teal accent)
+       ============================================ -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 uppercase">WHO WE ARE</h2>
+      <p class="text-gray-400 leading-relaxed mb-6">
+        We are a team of dedicated professionals passionate about helping businesses reach new customers and markets. Our proven track record speaks to our commitment to excellence and innovation.
+      </p>
+      <div class="flex items-center gap-4">
+        <a href="#" class="inline-flex items-center gap-2 bg-white text-black text-sm font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition-all group">
+          Learn More
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="relative rounded-2xl overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800"
+        alt="Our team at work"
+        class="w-full h-80 lg:h-96 object-cover"
+      />
+      <!-- Optional teal dot accent -->
+      <div class="absolute -bottom-4 -right-4 grid grid-cols-3 gap-1.5">
+        <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+        <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+        <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+        <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+        <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+        <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

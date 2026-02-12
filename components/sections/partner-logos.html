@@ -1,0 +1,115 @@
+<!--
+  CMC Design System - Partner/Trusted Logos Section
+
+  Description: Row of partner/client logos with heading.
+  Used on: HomePage, AboutUs
+  Variants: Dark background, Light background, Compact
+
+  Dependencies: Tailwind CSS CDN
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Logos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="bg-black font-sans">
+
+<!-- ============================================
+     VARIANT 1: Dark Background (HomePage)
+     ============================================ -->
+<section class="py-16 bg-black">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Section Title -->
+    <h2 class="text-center text-white text-xl font-semibold tracking-wide mb-12">
+      OUR TRUSTED PARTNERS
+    </h2>
+
+    <!-- Logo Row -->
+    <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
+      <!-- Replace with actual partner logos -->
+      <div class="flex items-center justify-center h-10 px-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
+        <span class="text-gray-400 text-sm font-medium tracking-wider">PARTNER ONE</span>
+      </div>
+      <div class="flex items-center justify-center h-10 px-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
+        <span class="text-gray-400 text-sm font-medium tracking-wider">partispin</span>
+      </div>
+      <div class="flex items-center justify-center h-10 px-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
+        <span class="text-cyan-500 text-sm font-bold tracking-wider">COX</span>
+      </div>
+      <div class="flex items-center justify-center h-10 px-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
+        <span class="text-blue-400 text-sm font-bold tracking-wider">PS</span>
+      </div>
+      <div class="flex items-center justify-center h-10 px-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
+        <span class="text-gray-400 text-sm font-medium tracking-wider">BRAND</span>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="mt-12 border-t border-gray-800"></div>
+  </div>
+</section>
+
+<!-- ============================================
+     VARIANT 2: With Scrolling Animation
+     ============================================ -->
+<section class="py-16 bg-black overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-center text-white text-xl font-semibold tracking-wide mb-12">
+      OUR TRUSTED PARTNERS
+    </h2>
+
+    <div class="relative">
+      <!-- Fade edges -->
+      <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-black to-transparent z-10"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-black to-transparent z-10"></div>
+
+      <!-- Scrolling container -->
+      <div class="flex items-center gap-16 animate-scroll">
+        <div class="flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
+          <span class="text-gray-400 text-sm font-medium tracking-wider whitespace-nowrap">PARTNER ONE</span>
+        </div>
+        <div class="flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
+          <span class="text-gray-400 text-sm font-medium tracking-wider whitespace-nowrap">partispin</span>
+        </div>
+        <div class="flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
+          <span class="text-cyan-500 text-sm font-bold tracking-wider whitespace-nowrap">COX</span>
+        </div>
+        <div class="flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
+          <span class="text-blue-400 text-sm font-bold tracking-wider whitespace-nowrap">PS</span>
+        </div>
+        <div class="flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
+          <span class="text-gray-400 text-sm font-medium tracking-wider whitespace-nowrap">BRAND</span>
+        </div>
+        <!-- Duplicate for seamless scroll -->
+        <div class="flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
+          <span class="text-gray-400 text-sm font-medium tracking-wider whitespace-nowrap">PARTNER ONE</span>
+        </div>
+        <div class="flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
+          <span class="text-gray-400 text-sm font-medium tracking-wider whitespace-nowrap">partispin</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+</style>
+
+</body>
+</html>
